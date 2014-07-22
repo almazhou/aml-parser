@@ -96,13 +96,188 @@ public interface AmlPackage extends EPackage
   int ABSTRACT_ELEMENTS = 1;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_ELEMENTS__NAME = 0;
+
+  /**
    * The number of structural features of the '<em>Abstract Elements</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ABSTRACT_ELEMENTS_FEATURE_COUNT = 0;
+  int ABSTRACT_ELEMENTS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.MinMaxImpl <em>Min Max</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.MinMaxImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getMinMax()
+   * @generated
+   */
+  int MIN_MAX = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIN_MAX__NAME = ABSTRACT_ELEMENTS__NAME;
+
+  /**
+   * The feature id for the '<em><b>Target Group Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIN_MAX__TARGET_GROUP_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Product Puids Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIN_MAX__PRODUCT_PUIDS_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Max Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIN_MAX__MAX_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Min Max</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIN_MAX_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.MaxFeatureImpl <em>Max Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.MaxFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getMaxFeature()
+   * @generated
+   */
+  int MAX_FEATURE = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAX_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAX_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Max Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAX_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.ProductPUIDFeatureImpl <em>Product PUID Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.ProductPUIDFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getProductPUIDFeature()
+   * @generated
+   */
+  int PRODUCT_PUID_FEATURE = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_PUID_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_PUID_FEATURE__VALUES = 1;
+
+  /**
+   * The number of structural features of the '<em>Product PUID Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRODUCT_PUID_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.TargetGroupFeatureImpl <em>Target Group Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.TargetGroupFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getTargetGroupFeature()
+   * @generated
+   */
+  int TARGET_GROUP_FEATURE = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET_GROUP_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET_GROUP_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Target Group Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TARGET_GROUP_FEATURE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl <em>Super Entity</em>}' class.
@@ -112,7 +287,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperEntity()
    * @generated
    */
-  int SUPER_ENTITY = 2;
+  int SUPER_ENTITY = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -121,7 +296,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUPER_ENTITY__NAME = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+  int SUPER_ENTITY__NAME = ABSTRACT_ELEMENTS__NAME;
 
   /**
    * The number of structural features of the '<em>Super Entity</em>' class.
@@ -130,7 +305,320 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUPER_ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
+  int SUPER_ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.DriveImpl <em>Drive</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.DriveImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getDrive()
+   * @generated
+   */
+  int DRIVE = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE__NAME = SUPER_ENTITY__NAME;
+
+  /**
+   * The feature id for the '<em><b>Type Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE__TYPE_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Size Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE__SIZE_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Speed Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE__SPEED_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Form Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE__FORM_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Drive</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DRIVE_FEATURE_COUNT = SUPER_ENTITY_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.FormFeatureImpl <em>Form Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.FormFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getFormFeature()
+   * @generated
+   */
+  int FORM_FEATURE = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORM_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORM_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Form Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORM_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.SpeedFeatureImpl <em>Speed Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.SpeedFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSpeedFeature()
+   * @generated
+   */
+  int SPEED_FEATURE = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Speed Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPEED_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.SizeFeatureImpl <em>Size Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.SizeFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSizeFeature()
+   * @generated
+   */
+  int SIZE_FEATURE = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Size Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIZE_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.TypeFeatureImpl <em>Type Feature</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.TypeFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getTypeFeature()
+   * @generated
+   */
+  int TYPE_FEATURE = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE__VALUE = 1;
+
+  /**
+   * The number of structural features of the '<em>Type Feature</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_FEATURE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.CableImpl <em>Cable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.CableImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getCable()
+   * @generated
+   */
+  int CABLE = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CABLE__NAME = SUPER_ENTITY__NAME;
+
+  /**
+   * The feature id for the '<em><b>Color Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CABLE__COLOR_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Network Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CABLE__NETWORK_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Length Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CABLE__LENGTH_FEATURE = SUPER_ENTITY_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Cable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CABLE_FEATURE_COUNT = SUPER_ENTITY_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.PriceRuleImpl <em>Price Rule</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.PriceRuleImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getPriceRule()
+   * @generated
+   */
+  int PRICE_RULE = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRICE_RULE__NAME = ABSTRACT_ELEMENTS__NAME;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRICE_RULE__SUPER_TYPE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRICE_RULE__FEATURES = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Price Rule</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRICE_RULE_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.EntityImpl <em>Entity</em>}' class.
@@ -140,7 +628,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getEntity()
    * @generated
    */
-  int ENTITY = 3;
+  int ENTITY = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -149,43 +637,16 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__NAME = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+  int ENTITY__NAME = ABSTRACT_ELEMENTS__NAME;
 
   /**
-   * The feature id for the '<em><b>Super Type</b></em>' containment reference.
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENTITY__SUPER_TYPE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Color Feature</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__COLOR_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Network Feature</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__NETWORK_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Length Feature</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ENTITY__LENGTH_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 4;
+  int ENTITY__SUPER_TYPE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -194,7 +655,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__FEATURES = ABSTRACT_ELEMENTS_FEATURE_COUNT + 5;
+  int ENTITY__FEATURES = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Entity</em>' class.
@@ -203,7 +664,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 6;
+  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.FeatureImpl <em>Feature</em>}' class.
@@ -213,7 +674,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getFeature()
    * @generated
    */
-  int FEATURE = 4;
+  int FEATURE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -250,7 +711,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLengthFeature()
    * @generated
    */
-  int LENGTH_FEATURE = 5;
+  int LENGTH_FEATURE = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -287,7 +748,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getNetWorkFeature()
    * @generated
    */
-  int NET_WORK_FEATURE = 6;
+  int NET_WORK_FEATURE = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -324,7 +785,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getColorFeature()
    * @generated
    */
-  int COLOR_FEATURE = 7;
+  int COLOR_FEATURE = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -354,16 +815,6 @@ public interface AmlPackage extends EPackage
   int COLOR_FEATURE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.zhouxuan.example.myaml.aml.SuperNames
-   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperNames()
-   * @generated
-   */
-  int SUPER_NAMES = 8;
-
-  /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -371,7 +822,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 9;
+  int COLOR = 19;
 
 
   /**
@@ -406,25 +857,411 @@ public interface AmlPackage extends EPackage
   EClass getAbstractElements();
 
   /**
-   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Super Entity</em>'.
-   * @see org.zhouxuan.example.myaml.aml.SuperEntity
-   * @generated
-   */
-  EClass getSuperEntity();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SuperEntity#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.AbstractElements#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.zhouxuan.example.myaml.aml.SuperEntity#getName()
-   * @see #getSuperEntity()
+   * @see org.zhouxuan.example.myaml.aml.AbstractElements#getName()
+   * @see #getAbstractElements()
    * @generated
    */
-  EAttribute getSuperEntity_Name();
+  EAttribute getAbstractElements_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.MinMax <em>Min Max</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Min Max</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MinMax
+   * @generated
+   */
+  EClass getMinMax();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.MinMax#getTargetGroupFeature <em>Target Group Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Target Group Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MinMax#getTargetGroupFeature()
+   * @see #getMinMax()
+   * @generated
+   */
+  EReference getMinMax_TargetGroupFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.MinMax#getProductPuidsFeature <em>Product Puids Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Product Puids Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MinMax#getProductPuidsFeature()
+   * @see #getMinMax()
+   * @generated
+   */
+  EReference getMinMax_ProductPuidsFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.MinMax#getMaxFeature <em>Max Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Max Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MinMax#getMaxFeature()
+   * @see #getMinMax()
+   * @generated
+   */
+  EReference getMinMax_MaxFeature();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.MaxFeature <em>Max Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Max Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MaxFeature
+   * @generated
+   */
+  EClass getMaxFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.MaxFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MaxFeature#getName()
+   * @see #getMaxFeature()
+   * @generated
+   */
+  EAttribute getMaxFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.MaxFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.MaxFeature#getValue()
+   * @see #getMaxFeature()
+   * @generated
+   */
+  EAttribute getMaxFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.ProductPUIDFeature <em>Product PUID Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Product PUID Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.ProductPUIDFeature
+   * @generated
+   */
+  EClass getProductPUIDFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.ProductPUIDFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.ProductPUIDFeature#getName()
+   * @see #getProductPUIDFeature()
+   * @generated
+   */
+  EAttribute getProductPUIDFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.zhouxuan.example.myaml.aml.ProductPUIDFeature#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.zhouxuan.example.myaml.aml.ProductPUIDFeature#getValues()
+   * @see #getProductPUIDFeature()
+   * @generated
+   */
+  EAttribute getProductPUIDFeature_Values();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.TargetGroupFeature <em>Target Group Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Target Group Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TargetGroupFeature
+   * @generated
+   */
+  EClass getTargetGroupFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.TargetGroupFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TargetGroupFeature#getName()
+   * @see #getTargetGroupFeature()
+   * @generated
+   */
+  EAttribute getTargetGroupFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.TargetGroupFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TargetGroupFeature#getValue()
+   * @see #getTargetGroupFeature()
+   * @generated
+   */
+  EAttribute getTargetGroupFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.Drive <em>Drive</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Drive</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Drive
+   * @generated
+   */
+  EClass getDrive();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Drive#getTypeFeature <em>Type Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Drive#getTypeFeature()
+   * @see #getDrive()
+   * @generated
+   */
+  EReference getDrive_TypeFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Drive#getSizeFeature <em>Size Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Size Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Drive#getSizeFeature()
+   * @see #getDrive()
+   * @generated
+   */
+  EReference getDrive_SizeFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Drive#getSpeedFeature <em>Speed Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Speed Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Drive#getSpeedFeature()
+   * @see #getDrive()
+   * @generated
+   */
+  EReference getDrive_SpeedFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Drive#getFormFeature <em>Form Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Form Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Drive#getFormFeature()
+   * @see #getDrive()
+   * @generated
+   */
+  EReference getDrive_FormFeature();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.FormFeature <em>Form Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Form Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.FormFeature
+   * @generated
+   */
+  EClass getFormFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.FormFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.FormFeature#getName()
+   * @see #getFormFeature()
+   * @generated
+   */
+  EAttribute getFormFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.FormFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.FormFeature#getValue()
+   * @see #getFormFeature()
+   * @generated
+   */
+  EAttribute getFormFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.SpeedFeature <em>Speed Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Speed Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SpeedFeature
+   * @generated
+   */
+  EClass getSpeedFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SpeedFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SpeedFeature#getName()
+   * @see #getSpeedFeature()
+   * @generated
+   */
+  EAttribute getSpeedFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SpeedFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SpeedFeature#getValue()
+   * @see #getSpeedFeature()
+   * @generated
+   */
+  EAttribute getSpeedFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.SizeFeature <em>Size Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Size Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SizeFeature
+   * @generated
+   */
+  EClass getSizeFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SizeFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SizeFeature#getName()
+   * @see #getSizeFeature()
+   * @generated
+   */
+  EAttribute getSizeFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SizeFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SizeFeature#getValue()
+   * @see #getSizeFeature()
+   * @generated
+   */
+  EAttribute getSizeFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.TypeFeature <em>Type Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TypeFeature
+   * @generated
+   */
+  EClass getTypeFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.TypeFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TypeFeature#getName()
+   * @see #getTypeFeature()
+   * @generated
+   */
+  EAttribute getTypeFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.TypeFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.TypeFeature#getValue()
+   * @see #getTypeFeature()
+   * @generated
+   */
+  EAttribute getTypeFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.Cable <em>Cable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Cable</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Cable
+   * @generated
+   */
+  EClass getCable();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Cable#getColorFeature <em>Color Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Cable#getColorFeature()
+   * @see #getCable()
+   * @generated
+   */
+  EReference getCable_ColorFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Cable#getNetworkFeature <em>Network Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Network Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Cable#getNetworkFeature()
+   * @see #getCable()
+   * @generated
+   */
+  EReference getCable_NetworkFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Cable#getLengthFeature <em>Length Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Length Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Cable#getLengthFeature()
+   * @see #getCable()
+   * @generated
+   */
+  EReference getCable_LengthFeature();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.PriceRule <em>Price Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Price Rule</em>'.
+   * @see org.zhouxuan.example.myaml.aml.PriceRule
+   * @generated
+   */
+  EClass getPriceRule();
+
+  /**
+   * Returns the meta object for the reference '{@link org.zhouxuan.example.myaml.aml.PriceRule#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.zhouxuan.example.myaml.aml.PriceRule#getSuperType()
+   * @see #getPriceRule()
+   * @generated
+   */
+  EReference getPriceRule_SuperType();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.zhouxuan.example.myaml.aml.PriceRule#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see org.zhouxuan.example.myaml.aml.PriceRule#getFeatures()
+   * @see #getPriceRule()
+   * @generated
+   */
+  EReference getPriceRule_Features();
 
   /**
    * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.Entity <em>Entity</em>}'.
@@ -437,59 +1274,15 @@ public interface AmlPackage extends EPackage
   EClass getEntity();
 
   /**
-   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.Entity#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.zhouxuan.example.myaml.aml.Entity#getName()
-   * @see #getEntity()
-   * @generated
-   */
-  EAttribute getEntity_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Super Type</em>'.
+   * @return the meta object for the reference '<em>Super Type</em>'.
    * @see org.zhouxuan.example.myaml.aml.Entity#getSuperType()
    * @see #getEntity()
    * @generated
    */
   EReference getEntity_SuperType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getColorFeature <em>Color Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Color Feature</em>'.
-   * @see org.zhouxuan.example.myaml.aml.Entity#getColorFeature()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_ColorFeature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getNetworkFeature <em>Network Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Network Feature</em>'.
-   * @see org.zhouxuan.example.myaml.aml.Entity#getNetworkFeature()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_NetworkFeature();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getLengthFeature <em>Length Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Length Feature</em>'.
-   * @see org.zhouxuan.example.myaml.aml.Entity#getLengthFeature()
-   * @see #getEntity()
-   * @generated
-   */
-  EReference getEntity_LengthFeature();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.zhouxuan.example.myaml.aml.Entity#getFeatures <em>Features</em>}'.
@@ -631,14 +1424,14 @@ public interface AmlPackage extends EPackage
   EAttribute getColorFeature_Value();
 
   /**
-   * Returns the meta object for enum '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}'.
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Super Names</em>'.
-   * @see org.zhouxuan.example.myaml.aml.SuperNames
+   * @return the meta object for class '<em>Super Entity</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SuperEntity
    * @generated
    */
-  EEnum getSuperNames();
+  EClass getSuperEntity();
 
   /**
    * Returns the meta object for enum '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}'.
@@ -702,14 +1495,56 @@ public interface AmlPackage extends EPackage
     EClass ABSTRACT_ELEMENTS = eINSTANCE.getAbstractElements();
 
     /**
-     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl <em>Super Entity</em>}' class.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl
-     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperEntity()
      * @generated
      */
-    EClass SUPER_ENTITY = eINSTANCE.getSuperEntity();
+    EAttribute ABSTRACT_ELEMENTS__NAME = eINSTANCE.getAbstractElements_Name();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.MinMaxImpl <em>Min Max</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.MinMaxImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getMinMax()
+     * @generated
+     */
+    EClass MIN_MAX = eINSTANCE.getMinMax();
+
+    /**
+     * The meta object literal for the '<em><b>Target Group Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MIN_MAX__TARGET_GROUP_FEATURE = eINSTANCE.getMinMax_TargetGroupFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Product Puids Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MIN_MAX__PRODUCT_PUIDS_FEATURE = eINSTANCE.getMinMax_ProductPuidsFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Max Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MIN_MAX__MAX_FEATURE = eINSTANCE.getMinMax_MaxFeature();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.MaxFeatureImpl <em>Max Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.MaxFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getMaxFeature()
+     * @generated
+     */
+    EClass MAX_FEATURE = eINSTANCE.getMaxFeature();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -717,7 +1552,273 @@ public interface AmlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SUPER_ENTITY__NAME = eINSTANCE.getSuperEntity_Name();
+    EAttribute MAX_FEATURE__NAME = eINSTANCE.getMaxFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MAX_FEATURE__VALUE = eINSTANCE.getMaxFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.ProductPUIDFeatureImpl <em>Product PUID Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.ProductPUIDFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getProductPUIDFeature()
+     * @generated
+     */
+    EClass PRODUCT_PUID_FEATURE = eINSTANCE.getProductPUIDFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRODUCT_PUID_FEATURE__NAME = eINSTANCE.getProductPUIDFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRODUCT_PUID_FEATURE__VALUES = eINSTANCE.getProductPUIDFeature_Values();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.TargetGroupFeatureImpl <em>Target Group Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.TargetGroupFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getTargetGroupFeature()
+     * @generated
+     */
+    EClass TARGET_GROUP_FEATURE = eINSTANCE.getTargetGroupFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TARGET_GROUP_FEATURE__NAME = eINSTANCE.getTargetGroupFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TARGET_GROUP_FEATURE__VALUE = eINSTANCE.getTargetGroupFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.DriveImpl <em>Drive</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.DriveImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getDrive()
+     * @generated
+     */
+    EClass DRIVE = eINSTANCE.getDrive();
+
+    /**
+     * The meta object literal for the '<em><b>Type Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DRIVE__TYPE_FEATURE = eINSTANCE.getDrive_TypeFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Size Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DRIVE__SIZE_FEATURE = eINSTANCE.getDrive_SizeFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Speed Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DRIVE__SPEED_FEATURE = eINSTANCE.getDrive_SpeedFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Form Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DRIVE__FORM_FEATURE = eINSTANCE.getDrive_FormFeature();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.FormFeatureImpl <em>Form Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.FormFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getFormFeature()
+     * @generated
+     */
+    EClass FORM_FEATURE = eINSTANCE.getFormFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FORM_FEATURE__NAME = eINSTANCE.getFormFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FORM_FEATURE__VALUE = eINSTANCE.getFormFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.SpeedFeatureImpl <em>Speed Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.SpeedFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSpeedFeature()
+     * @generated
+     */
+    EClass SPEED_FEATURE = eINSTANCE.getSpeedFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED_FEATURE__NAME = eINSTANCE.getSpeedFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPEED_FEATURE__VALUE = eINSTANCE.getSpeedFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.SizeFeatureImpl <em>Size Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.SizeFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSizeFeature()
+     * @generated
+     */
+    EClass SIZE_FEATURE = eINSTANCE.getSizeFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE_FEATURE__NAME = eINSTANCE.getSizeFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIZE_FEATURE__VALUE = eINSTANCE.getSizeFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.TypeFeatureImpl <em>Type Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.TypeFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getTypeFeature()
+     * @generated
+     */
+    EClass TYPE_FEATURE = eINSTANCE.getTypeFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_FEATURE__NAME = eINSTANCE.getTypeFeature_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_FEATURE__VALUE = eINSTANCE.getTypeFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.CableImpl <em>Cable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.CableImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getCable()
+     * @generated
+     */
+    EClass CABLE = eINSTANCE.getCable();
+
+    /**
+     * The meta object literal for the '<em><b>Color Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CABLE__COLOR_FEATURE = eINSTANCE.getCable_ColorFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Network Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CABLE__NETWORK_FEATURE = eINSTANCE.getCable_NetworkFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Length Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CABLE__LENGTH_FEATURE = eINSTANCE.getCable_LengthFeature();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.PriceRuleImpl <em>Price Rule</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.PriceRuleImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getPriceRule()
+     * @generated
+     */
+    EClass PRICE_RULE = eINSTANCE.getPriceRule();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRICE_RULE__SUPER_TYPE = eINSTANCE.getPriceRule_SuperType();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PRICE_RULE__FEATURES = eINSTANCE.getPriceRule_Features();
 
     /**
      * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.EntityImpl <em>Entity</em>}' class.
@@ -730,44 +1831,12 @@ public interface AmlPackage extends EPackage
     EClass ENTITY = eINSTANCE.getEntity();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference ENTITY__SUPER_TYPE = eINSTANCE.getEntity_SuperType();
-
-    /**
-     * The meta object literal for the '<em><b>Color Feature</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENTITY__COLOR_FEATURE = eINSTANCE.getEntity_ColorFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Network Feature</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENTITY__NETWORK_FEATURE = eINSTANCE.getEntity_NetworkFeature();
-
-    /**
-     * The meta object literal for the '<em><b>Length Feature</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ENTITY__LENGTH_FEATURE = eINSTANCE.getEntity_LengthFeature();
 
     /**
      * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
@@ -882,14 +1951,14 @@ public interface AmlPackage extends EPackage
     EAttribute COLOR_FEATURE__VALUE = eINSTANCE.getColorFeature_Value();
 
     /**
-     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}' enum.
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl <em>Super Entity</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.zhouxuan.example.myaml.aml.SuperNames
-     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperNames()
+     * @see org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperEntity()
      * @generated
      */
-    EEnum SUPER_NAMES = eINSTANCE.getSuperNames();
+    EClass SUPER_ENTITY = eINSTANCE.getSuperEntity();
 
     /**
      * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}' enum.

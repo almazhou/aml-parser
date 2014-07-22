@@ -67,12 +67,23 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
     {
       case AmlPackage.AML: return createAml();
       case AmlPackage.ABSTRACT_ELEMENTS: return createAbstractElements();
-      case AmlPackage.SUPER_ENTITY: return createSuperEntity();
+      case AmlPackage.MIN_MAX: return createMinMax();
+      case AmlPackage.MAX_FEATURE: return createMaxFeature();
+      case AmlPackage.PRODUCT_PUID_FEATURE: return createProductPUIDFeature();
+      case AmlPackage.TARGET_GROUP_FEATURE: return createTargetGroupFeature();
+      case AmlPackage.DRIVE: return createDrive();
+      case AmlPackage.FORM_FEATURE: return createFormFeature();
+      case AmlPackage.SPEED_FEATURE: return createSpeedFeature();
+      case AmlPackage.SIZE_FEATURE: return createSizeFeature();
+      case AmlPackage.TYPE_FEATURE: return createTypeFeature();
+      case AmlPackage.CABLE: return createCable();
+      case AmlPackage.PRICE_RULE: return createPriceRule();
       case AmlPackage.ENTITY: return createEntity();
       case AmlPackage.FEATURE: return createFeature();
       case AmlPackage.LENGTH_FEATURE: return createLengthFeature();
       case AmlPackage.NET_WORK_FEATURE: return createNetWorkFeature();
       case AmlPackage.COLOR_FEATURE: return createColorFeature();
+      case AmlPackage.SUPER_ENTITY: return createSuperEntity();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -88,8 +99,6 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case AmlPackage.SUPER_NAMES:
-        return createSuperNamesFromString(eDataType, initialValue);
       case AmlPackage.COLOR:
         return createColorFromString(eDataType, initialValue);
       default:
@@ -107,8 +116,6 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     switch (eDataType.getClassifierID())
     {
-      case AmlPackage.SUPER_NAMES:
-        return convertSuperNamesToString(eDataType, instanceValue);
       case AmlPackage.COLOR:
         return convertColorToString(eDataType, instanceValue);
       default:
@@ -143,10 +150,120 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SuperEntity createSuperEntity()
+  public MinMax createMinMax()
   {
-    SuperEntityImpl superEntity = new SuperEntityImpl();
-    return superEntity;
+    MinMaxImpl minMax = new MinMaxImpl();
+    return minMax;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MaxFeature createMaxFeature()
+  {
+    MaxFeatureImpl maxFeature = new MaxFeatureImpl();
+    return maxFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ProductPUIDFeature createProductPUIDFeature()
+  {
+    ProductPUIDFeatureImpl productPUIDFeature = new ProductPUIDFeatureImpl();
+    return productPUIDFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TargetGroupFeature createTargetGroupFeature()
+  {
+    TargetGroupFeatureImpl targetGroupFeature = new TargetGroupFeatureImpl();
+    return targetGroupFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Drive createDrive()
+  {
+    DriveImpl drive = new DriveImpl();
+    return drive;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FormFeature createFormFeature()
+  {
+    FormFeatureImpl formFeature = new FormFeatureImpl();
+    return formFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SpeedFeature createSpeedFeature()
+  {
+    SpeedFeatureImpl speedFeature = new SpeedFeatureImpl();
+    return speedFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SizeFeature createSizeFeature()
+  {
+    SizeFeatureImpl sizeFeature = new SizeFeatureImpl();
+    return sizeFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeFeature createTypeFeature()
+  {
+    TypeFeatureImpl typeFeature = new TypeFeatureImpl();
+    return typeFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Cable createCable()
+  {
+    CableImpl cable = new CableImpl();
+    return cable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PriceRule createPriceRule()
+  {
+    PriceRuleImpl priceRule = new PriceRuleImpl();
+    return priceRule;
   }
 
   /**
@@ -209,21 +326,10 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SuperNames createSuperNamesFromString(EDataType eDataType, String initialValue)
+  public SuperEntity createSuperEntity()
   {
-    SuperNames result = SuperNames.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertSuperNamesToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
+    SuperEntityImpl superEntity = new SuperEntityImpl();
+    return superEntity;
   }
 
   /**

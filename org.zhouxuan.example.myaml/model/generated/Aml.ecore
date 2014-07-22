@@ -5,25 +5,71 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//AbstractElements" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SuperEntity" eSuperTypes="#//AbstractElements">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//SuperNames"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="SuperNames">
-    <eLiterals name="Cable" literal="Cable"/>
-    <eLiterals name="Driver" value="1" literal="Driver"/>
-    <eLiterals name="MaxMin" value="2" literal="MaxMin"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//AbstractElements">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractElements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//SuperEntity"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MinMax" eSuperTypes="#//AbstractElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetGroupFeature" eType="#//TargetGroupFeature"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productPuidsFeature" eType="#//ProductPUIDFeature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxFeature" eType="#//MaxFeature"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MaxFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProductPUIDFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TargetGroupFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Drive" eSuperTypes="#//SuperEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeFeature" eType="#//TypeFeature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sizeFeature" eType="#//SizeFeature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="speedFeature" eType="#//SpeedFeature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formFeature" eType="#//FormFeature"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FormFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpeedFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SizeFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeFeature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cable" eSuperTypes="#//SuperEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="colorFeature" eType="#//ColorFeature"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="networkFeature" eType="#//NetWorkFeature"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lengthFeature" eType="#//LengthFeature"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PriceRule" eSuperTypes="#//AbstractElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//MinMax"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//Feature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//AbstractElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//SuperEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
         eType="#//Feature" containment="true"/>
   </eClassifiers>
@@ -50,4 +96,5 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Color"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperEntity" eSuperTypes="#//AbstractElements"/>
 </ecore:EPackage>

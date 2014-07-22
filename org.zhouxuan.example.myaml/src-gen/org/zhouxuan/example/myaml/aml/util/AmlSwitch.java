@@ -86,11 +86,86 @@ public class AmlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AmlPackage.SUPER_ENTITY:
+      case AmlPackage.MIN_MAX:
       {
-        SuperEntity superEntity = (SuperEntity)theEObject;
-        T result = caseSuperEntity(superEntity);
-        if (result == null) result = caseAbstractElements(superEntity);
+        MinMax minMax = (MinMax)theEObject;
+        T result = caseMinMax(minMax);
+        if (result == null) result = caseAbstractElements(minMax);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.MAX_FEATURE:
+      {
+        MaxFeature maxFeature = (MaxFeature)theEObject;
+        T result = caseMaxFeature(maxFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.PRODUCT_PUID_FEATURE:
+      {
+        ProductPUIDFeature productPUIDFeature = (ProductPUIDFeature)theEObject;
+        T result = caseProductPUIDFeature(productPUIDFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.TARGET_GROUP_FEATURE:
+      {
+        TargetGroupFeature targetGroupFeature = (TargetGroupFeature)theEObject;
+        T result = caseTargetGroupFeature(targetGroupFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.DRIVE:
+      {
+        Drive drive = (Drive)theEObject;
+        T result = caseDrive(drive);
+        if (result == null) result = caseSuperEntity(drive);
+        if (result == null) result = caseAbstractElements(drive);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.FORM_FEATURE:
+      {
+        FormFeature formFeature = (FormFeature)theEObject;
+        T result = caseFormFeature(formFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.SPEED_FEATURE:
+      {
+        SpeedFeature speedFeature = (SpeedFeature)theEObject;
+        T result = caseSpeedFeature(speedFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.SIZE_FEATURE:
+      {
+        SizeFeature sizeFeature = (SizeFeature)theEObject;
+        T result = caseSizeFeature(sizeFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.TYPE_FEATURE:
+      {
+        TypeFeature typeFeature = (TypeFeature)theEObject;
+        T result = caseTypeFeature(typeFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.CABLE:
+      {
+        Cable cable = (Cable)theEObject;
+        T result = caseCable(cable);
+        if (result == null) result = caseSuperEntity(cable);
+        if (result == null) result = caseAbstractElements(cable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.PRICE_RULE:
+      {
+        PriceRule priceRule = (PriceRule)theEObject;
+        T result = casePriceRule(priceRule);
+        if (result == null) result = caseAbstractElements(priceRule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -127,6 +202,14 @@ public class AmlSwitch<T> extends Switch<T>
       {
         ColorFeature colorFeature = (ColorFeature)theEObject;
         T result = caseColorFeature(colorFeature);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.SUPER_ENTITY:
+      {
+        SuperEntity superEntity = (SuperEntity)theEObject;
+        T result = caseSuperEntity(superEntity);
+        if (result == null) result = caseAbstractElements(superEntity);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -167,17 +250,177 @@ public class AmlSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Min Max</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Min Max</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSuperEntity(SuperEntity object)
+  public T caseMinMax(MinMax object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Max Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Max Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMaxFeature(MaxFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Product PUID Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Product PUID Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProductPUIDFeature(ProductPUIDFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Target Group Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Target Group Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTargetGroupFeature(TargetGroupFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Drive</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Drive</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDrive(Drive object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Form Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Form Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFormFeature(FormFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Speed Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Speed Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpeedFeature(SpeedFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Size Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Size Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSizeFeature(SizeFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Feature</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Feature</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeFeature(TypeFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Cable</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Cable</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCable(Cable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Price Rule</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Price Rule</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePriceRule(PriceRule object)
   {
     return null;
   }
@@ -258,6 +501,22 @@ public class AmlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseColorFeature(ColorFeature object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuperEntity(SuperEntity object)
   {
     return null;
   }

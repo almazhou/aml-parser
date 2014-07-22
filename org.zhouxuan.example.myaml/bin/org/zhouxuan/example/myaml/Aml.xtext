@@ -9,25 +9,79 @@ Aml hidden(WS, ML_COMMENT, SL_COMMENT):
 ;
 
 AbstractElements:
-	Entity | SuperEntity	
+	Entity | PriceRule | SuperEntity | MinMax	
 ;
 
-SuperEntity:
-	name = SuperNames	
+MinMax:
+	 name = ID '{'
+		targetGroupFeature = TargetGroupFeature	
+		productPuidsFeature = ProductPUIDFeature 
+		maxFeature = MaxFeature
+	'}'		
 ;
 
-enum SuperNames:
-	Cable | Driver | MaxMin	
+MaxFeature:
+	name = 'Max' '=' value = INT	
+;
+
+ProductPUIDFeature:
+	name = 'ProductPUIDs' '=' values+=INT (',' values+=INT)*	
+;
+
+TargetGroupFeature:
+	name = 'TargetGroup' '=' value = ID	
+;
+
+
+
+Drive:
+    name = ID '{'
+	typeFeature = TypeFeature
+	sizeFeature = SizeFeature
+	speedFeature = SpeedFeature
+	formFeature = FormFeature
+	'}'	
+;
+
+FormFeature:
+	name = 'formFactor' '=' value = INT	
+;
+
+SpeedFeature:
+	name = 'speed' '=' value = DOUBLE	
+;
+
+SizeFeature:
+	name = 'size' '=' value = INT	
+;
+
+TypeFeature:
+	name = 'type' '=' value = STRING		
+;
+
+Cable:
+name =ID '{'
+		colorFeature = ColorFeature
+		networkFeature = NetWorkFeature 
+		lengthFeature = LengthFeature 		
+	'}'	
+;
+
+PriceRule:
+	'rule' name = ID ('extends' superType = [MinMax | QualifiedName])? '{'
+		(features += Feature)*
+	'}'	
 ;
 
 
 Entity:
-	'puid' name = ID ('extends' superType = SuperEntity)? '{'
-		colorFeature = ColorFeature
-		networkFeature = NetWorkFeature 
-		lengthFeature = LengthFeature 		
+	'puid' name = ID ('extends' superType = [SuperEntity | QualifiedName])? '{'
 		(features += Feature)*
 	'}'	
+;
+
+QualifiedName:
+	ID ('.' ID)*	
 ;
 
 enum Color :
@@ -53,4 +107,6 @@ NetWorkFeature:
 ColorFeature:
 	name = 'color' '=' value= Color ';'
 ;
-
+SuperEntity:
+	Cable | Drive		
+;

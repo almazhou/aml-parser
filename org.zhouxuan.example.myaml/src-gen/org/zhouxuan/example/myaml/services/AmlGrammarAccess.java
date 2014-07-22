@@ -38,36 +38,492 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AbstractElements");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cEntityParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cSuperEntityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cPriceRuleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSuperEntityParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cMinMaxParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//AbstractElements:
-		//	Entity | SuperEntity;
+		//	Entity | PriceRule | SuperEntity | MinMax;
 		public ParserRule getRule() { return rule; }
 
-		//Entity | SuperEntity
+		//Entity | PriceRule | SuperEntity | MinMax
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Entity
 		public RuleCall getEntityParserRuleCall_0() { return cEntityParserRuleCall_0; }
 
+		//PriceRule
+		public RuleCall getPriceRuleParserRuleCall_1() { return cPriceRuleParserRuleCall_1; }
+
 		//SuperEntity
-		public RuleCall getSuperEntityParserRuleCall_1() { return cSuperEntityParserRuleCall_1; }
+		public RuleCall getSuperEntityParserRuleCall_2() { return cSuperEntityParserRuleCall_2; }
+
+		//MinMax
+		public RuleCall getMinMaxParserRuleCall_3() { return cMinMaxParserRuleCall_3; }
 	}
 
-	public class SuperEntityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SuperEntity");
-		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameSuperNamesEnumRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+	public class MinMaxElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MinMax");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTargetGroupFeatureAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTargetGroupFeatureTargetGroupFeatureParserRuleCall_2_0 = (RuleCall)cTargetGroupFeatureAssignment_2.eContents().get(0);
+		private final Assignment cProductPuidsFeatureAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cProductPuidsFeatureProductPUIDFeatureParserRuleCall_3_0 = (RuleCall)cProductPuidsFeatureAssignment_3.eContents().get(0);
+		private final Assignment cMaxFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cMaxFeatureMaxFeatureParserRuleCall_4_0 = (RuleCall)cMaxFeatureAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//SuperEntity:
-		//	name=SuperNames;
+		//MinMax:
+		//	name=ID "{" targetGroupFeature=TargetGroupFeature productPuidsFeature=ProductPUIDFeature maxFeature=MaxFeature "}";
 		public ParserRule getRule() { return rule; }
 
-		//name=SuperNames
-		public Assignment getNameAssignment() { return cNameAssignment; }
+		//name=ID "{" targetGroupFeature=TargetGroupFeature productPuidsFeature=ProductPUIDFeature maxFeature=MaxFeature "}"
+		public Group getGroup() { return cGroup; }
 
-		//SuperNames
-		public RuleCall getNameSuperNamesEnumRuleCall_0() { return cNameSuperNamesEnumRuleCall_0; }
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//targetGroupFeature=TargetGroupFeature
+		public Assignment getTargetGroupFeatureAssignment_2() { return cTargetGroupFeatureAssignment_2; }
+
+		//TargetGroupFeature
+		public RuleCall getTargetGroupFeatureTargetGroupFeatureParserRuleCall_2_0() { return cTargetGroupFeatureTargetGroupFeatureParserRuleCall_2_0; }
+
+		//productPuidsFeature=ProductPUIDFeature
+		public Assignment getProductPuidsFeatureAssignment_3() { return cProductPuidsFeatureAssignment_3; }
+
+		//ProductPUIDFeature
+		public RuleCall getProductPuidsFeatureProductPUIDFeatureParserRuleCall_3_0() { return cProductPuidsFeatureProductPUIDFeatureParserRuleCall_3_0; }
+
+		//maxFeature=MaxFeature
+		public Assignment getMaxFeatureAssignment_4() { return cMaxFeatureAssignment_4; }
+
+		//MaxFeature
+		public RuleCall getMaxFeatureMaxFeatureParserRuleCall_4_0() { return cMaxFeatureMaxFeatureParserRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class MaxFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MaxFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameMaxKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueINTTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//MaxFeature:
+		//	name="Max" "=" value=INT;
+		public ParserRule getRule() { return rule; }
+
+		//name="Max" "=" value=INT
+		public Group getGroup() { return cGroup; }
+
+		//name="Max"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"Max"
+		public Keyword getNameMaxKeyword_0_0() { return cNameMaxKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=INT
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
+	}
+
+	public class ProductPUIDFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProductPUIDFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameProductPUIDsKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValuesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValuesINTTerminalRuleCall_2_0 = (RuleCall)cValuesAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cValuesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cValuesINTTerminalRuleCall_3_1_0 = (RuleCall)cValuesAssignment_3_1.eContents().get(0);
+		
+		//ProductPUIDFeature:
+		//	name="ProductPUIDs" "=" values+=INT ("," values+=INT)*;
+		public ParserRule getRule() { return rule; }
+
+		//name="ProductPUIDs" "=" values+=INT ("," values+=INT)*
+		public Group getGroup() { return cGroup; }
+
+		//name="ProductPUIDs"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"ProductPUIDs"
+		public Keyword getNameProductPUIDsKeyword_0_0() { return cNameProductPUIDsKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//values+=INT
+		public Assignment getValuesAssignment_2() { return cValuesAssignment_2; }
+
+		//INT
+		public RuleCall getValuesINTTerminalRuleCall_2_0() { return cValuesINTTerminalRuleCall_2_0; }
+
+		//("," values+=INT)*
+		public Group getGroup_3() { return cGroup_3; }
+
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+
+		//values+=INT
+		public Assignment getValuesAssignment_3_1() { return cValuesAssignment_3_1; }
+
+		//INT
+		public RuleCall getValuesINTTerminalRuleCall_3_1_0() { return cValuesINTTerminalRuleCall_3_1_0; }
+	}
+
+	public class TargetGroupFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TargetGroupFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTargetGroupKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueIDTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//TargetGroupFeature:
+		//	name="TargetGroup" "=" value=ID;
+		public ParserRule getRule() { return rule; }
+
+		//name="TargetGroup" "=" value=ID
+		public Group getGroup() { return cGroup; }
+
+		//name="TargetGroup"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"TargetGroup"
+		public Keyword getNameTargetGroupKeyword_0_0() { return cNameTargetGroupKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=ID
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//ID
+		public RuleCall getValueIDTerminalRuleCall_2_0() { return cValueIDTerminalRuleCall_2_0; }
+	}
+
+	public class DriveElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Drive");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTypeFeatureAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeFeatureTypeFeatureParserRuleCall_2_0 = (RuleCall)cTypeFeatureAssignment_2.eContents().get(0);
+		private final Assignment cSizeFeatureAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSizeFeatureSizeFeatureParserRuleCall_3_0 = (RuleCall)cSizeFeatureAssignment_3.eContents().get(0);
+		private final Assignment cSpeedFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSpeedFeatureSpeedFeatureParserRuleCall_4_0 = (RuleCall)cSpeedFeatureAssignment_4.eContents().get(0);
+		private final Assignment cFormFeatureAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cFormFeatureFormFeatureParserRuleCall_5_0 = (RuleCall)cFormFeatureAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//Drive:
+		//	name=ID "{" typeFeature=TypeFeature sizeFeature=SizeFeature speedFeature=SpeedFeature formFeature=FormFeature "}";
+		public ParserRule getRule() { return rule; }
+
+		//name=ID "{" typeFeature=TypeFeature sizeFeature=SizeFeature speedFeature=SpeedFeature formFeature=FormFeature "}"
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//typeFeature=TypeFeature
+		public Assignment getTypeFeatureAssignment_2() { return cTypeFeatureAssignment_2; }
+
+		//TypeFeature
+		public RuleCall getTypeFeatureTypeFeatureParserRuleCall_2_0() { return cTypeFeatureTypeFeatureParserRuleCall_2_0; }
+
+		//sizeFeature=SizeFeature
+		public Assignment getSizeFeatureAssignment_3() { return cSizeFeatureAssignment_3; }
+
+		//SizeFeature
+		public RuleCall getSizeFeatureSizeFeatureParserRuleCall_3_0() { return cSizeFeatureSizeFeatureParserRuleCall_3_0; }
+
+		//speedFeature=SpeedFeature
+		public Assignment getSpeedFeatureAssignment_4() { return cSpeedFeatureAssignment_4; }
+
+		//SpeedFeature
+		public RuleCall getSpeedFeatureSpeedFeatureParserRuleCall_4_0() { return cSpeedFeatureSpeedFeatureParserRuleCall_4_0; }
+
+		//formFeature=FormFeature
+		public Assignment getFormFeatureAssignment_5() { return cFormFeatureAssignment_5; }
+
+		//FormFeature
+		public RuleCall getFormFeatureFormFeatureParserRuleCall_5_0() { return cFormFeatureFormFeatureParserRuleCall_5_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class FormFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FormFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameFormFactorKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueINTTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//FormFeature:
+		//	name="formFactor" "=" value=INT;
+		public ParserRule getRule() { return rule; }
+
+		//name="formFactor" "=" value=INT
+		public Group getGroup() { return cGroup; }
+
+		//name="formFactor"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"formFactor"
+		public Keyword getNameFormFactorKeyword_0_0() { return cNameFormFactorKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=INT
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
+	}
+
+	public class SpeedFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SpeedFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameSpeedKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueDOUBLEParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//SpeedFeature:
+		//	name="speed" "=" value=DOUBLE;
+		public ParserRule getRule() { return rule; }
+
+		//name="speed" "=" value=DOUBLE
+		public Group getGroup() { return cGroup; }
+
+		//name="speed"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"speed"
+		public Keyword getNameSpeedKeyword_0_0() { return cNameSpeedKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=DOUBLE
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//DOUBLE
+		public RuleCall getValueDOUBLEParserRuleCall_2_0() { return cValueDOUBLEParserRuleCall_2_0; }
+	}
+
+	public class SizeFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SizeFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameSizeKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueINTTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//SizeFeature:
+		//	name="size" "=" value=INT;
+		public ParserRule getRule() { return rule; }
+
+		//name="size" "=" value=INT
+		public Group getGroup() { return cGroup; }
+
+		//name="size"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"size"
+		public Keyword getNameSizeKeyword_0_0() { return cNameSizeKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=INT
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_2_0() { return cValueINTTerminalRuleCall_2_0; }
+	}
+
+	public class TypeFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TypeFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameTypeKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueSTRINGTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		
+		//TypeFeature:
+		//	name="type" "=" value=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//name="type" "=" value=STRING
+		public Group getGroup() { return cGroup; }
+
+		//name="type"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"type"
+		public Keyword getNameTypeKeyword_0_0() { return cNameTypeKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//value=STRING
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_2_0() { return cValueSTRINGTerminalRuleCall_2_0; }
+	}
+
+	public class CableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Cable");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cColorFeatureAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cColorFeatureColorFeatureParserRuleCall_2_0 = (RuleCall)cColorFeatureAssignment_2.eContents().get(0);
+		private final Assignment cNetworkFeatureAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNetworkFeatureNetWorkFeatureParserRuleCall_3_0 = (RuleCall)cNetworkFeatureAssignment_3.eContents().get(0);
+		private final Assignment cLengthFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLengthFeatureLengthFeatureParserRuleCall_4_0 = (RuleCall)cLengthFeatureAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Cable:
+		//	name=ID "{" colorFeature=ColorFeature networkFeature=NetWorkFeature lengthFeature=LengthFeature "}";
+		public ParserRule getRule() { return rule; }
+
+		//name=ID "{" colorFeature=ColorFeature networkFeature=NetWorkFeature lengthFeature=LengthFeature "}"
+		public Group getGroup() { return cGroup; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//colorFeature=ColorFeature
+		public Assignment getColorFeatureAssignment_2() { return cColorFeatureAssignment_2; }
+
+		//ColorFeature
+		public RuleCall getColorFeatureColorFeatureParserRuleCall_2_0() { return cColorFeatureColorFeatureParserRuleCall_2_0; }
+
+		//networkFeature=NetWorkFeature
+		public Assignment getNetworkFeatureAssignment_3() { return cNetworkFeatureAssignment_3; }
+
+		//NetWorkFeature
+		public RuleCall getNetworkFeatureNetWorkFeatureParserRuleCall_3_0() { return cNetworkFeatureNetWorkFeatureParserRuleCall_3_0; }
+
+		//lengthFeature=LengthFeature
+		public Assignment getLengthFeatureAssignment_4() { return cLengthFeatureAssignment_4; }
+
+		//LengthFeature
+		public RuleCall getLengthFeatureLengthFeatureParserRuleCall_4_0() { return cLengthFeatureLengthFeatureParserRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class PriceRuleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PriceRule");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRuleKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cSuperTypeMinMaxCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeMinMaxQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cSuperTypeMinMaxCrossReference_2_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFeaturesFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//PriceRule:
+		//	"rule" name=ID ("extends" superType=[MinMax|QualifiedName])? "{" features+=Feature* "}";
+		public ParserRule getRule() { return rule; }
+
+		//"rule" name=ID ("extends" superType=[MinMax|QualifiedName])? "{" features+=Feature* "}"
+		public Group getGroup() { return cGroup; }
+
+		//"rule"
+		public Keyword getRuleKeyword_0() { return cRuleKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//("extends" superType=[MinMax|QualifiedName])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"extends"
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
+
+		//superType=[MinMax|QualifiedName]
+		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
+
+		//[MinMax|QualifiedName]
+		public CrossReference getSuperTypeMinMaxCrossReference_2_1_0() { return cSuperTypeMinMaxCrossReference_2_1_0; }
+
+		//QualifiedName
+		public RuleCall getSuperTypeMinMaxQualifiedNameParserRuleCall_2_1_0_1() { return cSuperTypeMinMaxQualifiedNameParserRuleCall_2_1_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//features+=Feature*
+		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+
+		//Feature
+		public RuleCall getFeaturesFeatureParserRuleCall_4_0() { return cFeaturesFeatureParserRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
@@ -79,25 +535,18 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cSuperTypeSuperEntityParserRuleCall_2_1_0 = (RuleCall)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final CrossReference cSuperTypeSuperEntityCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeSuperEntityQualifiedNameParserRuleCall_2_1_0_1 = (RuleCall)cSuperTypeSuperEntityCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cColorFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cColorFeatureColorFeatureParserRuleCall_4_0 = (RuleCall)cColorFeatureAssignment_4.eContents().get(0);
-		private final Assignment cNetworkFeatureAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cNetworkFeatureNetWorkFeatureParserRuleCall_5_0 = (RuleCall)cNetworkFeatureAssignment_5.eContents().get(0);
-		private final Assignment cLengthFeatureAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cLengthFeatureLengthFeatureParserRuleCall_6_0 = (RuleCall)cLengthFeatureAssignment_6.eContents().get(0);
-		private final Assignment cFeaturesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFeaturesFeatureParserRuleCall_7_0 = (RuleCall)cFeaturesAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFeaturesFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Entity:
-		//	"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
-		//	lengthFeature=LengthFeature features+=Feature* "}";
+		//	"puid" name=ID ("extends" superType=[SuperEntity|QualifiedName])? "{" features+=Feature* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
-		//lengthFeature=LengthFeature features+=Feature* "}"
+		//"puid" name=ID ("extends" superType=[SuperEntity|QualifiedName])? "{" features+=Feature* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"puid"
@@ -109,47 +558,60 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("extends" superType=SuperEntity)?
+		//("extends" superType=[SuperEntity|QualifiedName])?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"extends"
 		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
 
-		//superType=SuperEntity
+		//superType=[SuperEntity|QualifiedName]
 		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
 
-		//SuperEntity
-		public RuleCall getSuperTypeSuperEntityParserRuleCall_2_1_0() { return cSuperTypeSuperEntityParserRuleCall_2_1_0; }
+		//[SuperEntity|QualifiedName]
+		public CrossReference getSuperTypeSuperEntityCrossReference_2_1_0() { return cSuperTypeSuperEntityCrossReference_2_1_0; }
+
+		//QualifiedName
+		public RuleCall getSuperTypeSuperEntityQualifiedNameParserRuleCall_2_1_0_1() { return cSuperTypeSuperEntityQualifiedNameParserRuleCall_2_1_0_1; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//colorFeature=ColorFeature
-		public Assignment getColorFeatureAssignment_4() { return cColorFeatureAssignment_4; }
-
-		//ColorFeature
-		public RuleCall getColorFeatureColorFeatureParserRuleCall_4_0() { return cColorFeatureColorFeatureParserRuleCall_4_0; }
-
-		//networkFeature=NetWorkFeature
-		public Assignment getNetworkFeatureAssignment_5() { return cNetworkFeatureAssignment_5; }
-
-		//NetWorkFeature
-		public RuleCall getNetworkFeatureNetWorkFeatureParserRuleCall_5_0() { return cNetworkFeatureNetWorkFeatureParserRuleCall_5_0; }
-
-		//lengthFeature=LengthFeature
-		public Assignment getLengthFeatureAssignment_6() { return cLengthFeatureAssignment_6; }
-
-		//LengthFeature
-		public RuleCall getLengthFeatureLengthFeatureParserRuleCall_6_0() { return cLengthFeatureLengthFeatureParserRuleCall_6_0; }
-
 		//features+=Feature*
-		public Assignment getFeaturesAssignment_7() { return cFeaturesAssignment_7; }
+		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
 
 		//Feature
-		public RuleCall getFeaturesFeatureParserRuleCall_7_0() { return cFeaturesFeatureParserRuleCall_7_0; }
+		public RuleCall getFeaturesFeatureParserRuleCall_4_0() { return cFeaturesFeatureParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QualifiedName:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
@@ -319,44 +781,28 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
-	
-	
-	public class SuperNamesElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "SuperNames");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cCableEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cCableCableKeyword_0_0 = (Keyword)cCableEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cDriverEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cDriverDriverKeyword_1_0 = (Keyword)cDriverEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cMaxMinEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cMaxMinMaxMinKeyword_2_0 = (Keyword)cMaxMinEnumLiteralDeclaration_2.eContents().get(0);
-		
-		//enum SuperNames:
-		//	Cable | Driver | MaxMin;
-		public EnumRule getRule() { return rule; }
 
-		//Cable | Driver | MaxMin
+	public class SuperEntityElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SuperEntity");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cCableParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDriveParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//SuperEntity:
+		//	Cable | Drive;
+		public ParserRule getRule() { return rule; }
+
+		//Cable | Drive
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Cable
-		public EnumLiteralDeclaration getCableEnumLiteralDeclaration_0() { return cCableEnumLiteralDeclaration_0; }
+		public RuleCall getCableParserRuleCall_0() { return cCableParserRuleCall_0; }
 
-		//"Cable"
-		public Keyword getCableCableKeyword_0_0() { return cCableCableKeyword_0_0; }
-
-		//Driver
-		public EnumLiteralDeclaration getDriverEnumLiteralDeclaration_1() { return cDriverEnumLiteralDeclaration_1; }
-
-		//"Driver"
-		public Keyword getDriverDriverKeyword_1_0() { return cDriverDriverKeyword_1_0; }
-
-		//MaxMin
-		public EnumLiteralDeclaration getMaxMinEnumLiteralDeclaration_2() { return cMaxMinEnumLiteralDeclaration_2; }
-
-		//"MaxMin"
-		public Keyword getMaxMinMaxMinKeyword_2_0() { return cMaxMinMaxMinKeyword_2_0; }
+		//Drive
+		public RuleCall getDriveParserRuleCall_1() { return cDriveParserRuleCall_1; }
 	}
-
+	
+	
 	public class ColorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -411,15 +857,26 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private AmlElements pAml;
 	private AbstractElementsElements pAbstractElements;
-	private SuperEntityElements pSuperEntity;
-	private SuperNamesElements unknownRuleSuperNames;
+	private MinMaxElements pMinMax;
+	private MaxFeatureElements pMaxFeature;
+	private ProductPUIDFeatureElements pProductPUIDFeature;
+	private TargetGroupFeatureElements pTargetGroupFeature;
+	private DriveElements pDrive;
+	private FormFeatureElements pFormFeature;
+	private SpeedFeatureElements pSpeedFeature;
+	private SizeFeatureElements pSizeFeature;
+	private TypeFeatureElements pTypeFeature;
+	private CableElements pCable;
+	private PriceRuleElements pPriceRule;
 	private EntityElements pEntity;
+	private QualifiedNameElements pQualifiedName;
 	private ColorElements unknownRuleColor;
 	private FeatureElements pFeature;
 	private LengthFeatureElements pLengthFeature;
 	private DOUBLEElements pDOUBLE;
 	private NetWorkFeatureElements pNetWorkFeature;
 	private ColorFeatureElements pColorFeature;
+	private SuperEntityElements pSuperEntity;
 	
 	private final Grammar grammar;
 
@@ -470,7 +927,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AbstractElements:
-	//	Entity | SuperEntity;
+	//	Entity | PriceRule | SuperEntity | MinMax;
 	public AbstractElementsElements getAbstractElementsAccess() {
 		return (pAbstractElements != null) ? pAbstractElements : (pAbstractElements = new AbstractElementsElements());
 	}
@@ -479,35 +936,134 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		return getAbstractElementsAccess().getRule();
 	}
 
-	//SuperEntity:
-	//	name=SuperNames;
-	public SuperEntityElements getSuperEntityAccess() {
-		return (pSuperEntity != null) ? pSuperEntity : (pSuperEntity = new SuperEntityElements());
+	//MinMax:
+	//	name=ID "{" targetGroupFeature=TargetGroupFeature productPuidsFeature=ProductPUIDFeature maxFeature=MaxFeature "}";
+	public MinMaxElements getMinMaxAccess() {
+		return (pMinMax != null) ? pMinMax : (pMinMax = new MinMaxElements());
 	}
 	
-	public ParserRule getSuperEntityRule() {
-		return getSuperEntityAccess().getRule();
+	public ParserRule getMinMaxRule() {
+		return getMinMaxAccess().getRule();
 	}
 
-	//enum SuperNames:
-	//	Cable | Driver | MaxMin;
-	public SuperNamesElements getSuperNamesAccess() {
-		return (unknownRuleSuperNames != null) ? unknownRuleSuperNames : (unknownRuleSuperNames = new SuperNamesElements());
+	//MaxFeature:
+	//	name="Max" "=" value=INT;
+	public MaxFeatureElements getMaxFeatureAccess() {
+		return (pMaxFeature != null) ? pMaxFeature : (pMaxFeature = new MaxFeatureElements());
 	}
 	
-	public EnumRule getSuperNamesRule() {
-		return getSuperNamesAccess().getRule();
+	public ParserRule getMaxFeatureRule() {
+		return getMaxFeatureAccess().getRule();
+	}
+
+	//ProductPUIDFeature:
+	//	name="ProductPUIDs" "=" values+=INT ("," values+=INT)*;
+	public ProductPUIDFeatureElements getProductPUIDFeatureAccess() {
+		return (pProductPUIDFeature != null) ? pProductPUIDFeature : (pProductPUIDFeature = new ProductPUIDFeatureElements());
+	}
+	
+	public ParserRule getProductPUIDFeatureRule() {
+		return getProductPUIDFeatureAccess().getRule();
+	}
+
+	//TargetGroupFeature:
+	//	name="TargetGroup" "=" value=ID;
+	public TargetGroupFeatureElements getTargetGroupFeatureAccess() {
+		return (pTargetGroupFeature != null) ? pTargetGroupFeature : (pTargetGroupFeature = new TargetGroupFeatureElements());
+	}
+	
+	public ParserRule getTargetGroupFeatureRule() {
+		return getTargetGroupFeatureAccess().getRule();
+	}
+
+	//Drive:
+	//	name=ID "{" typeFeature=TypeFeature sizeFeature=SizeFeature speedFeature=SpeedFeature formFeature=FormFeature "}";
+	public DriveElements getDriveAccess() {
+		return (pDrive != null) ? pDrive : (pDrive = new DriveElements());
+	}
+	
+	public ParserRule getDriveRule() {
+		return getDriveAccess().getRule();
+	}
+
+	//FormFeature:
+	//	name="formFactor" "=" value=INT;
+	public FormFeatureElements getFormFeatureAccess() {
+		return (pFormFeature != null) ? pFormFeature : (pFormFeature = new FormFeatureElements());
+	}
+	
+	public ParserRule getFormFeatureRule() {
+		return getFormFeatureAccess().getRule();
+	}
+
+	//SpeedFeature:
+	//	name="speed" "=" value=DOUBLE;
+	public SpeedFeatureElements getSpeedFeatureAccess() {
+		return (pSpeedFeature != null) ? pSpeedFeature : (pSpeedFeature = new SpeedFeatureElements());
+	}
+	
+	public ParserRule getSpeedFeatureRule() {
+		return getSpeedFeatureAccess().getRule();
+	}
+
+	//SizeFeature:
+	//	name="size" "=" value=INT;
+	public SizeFeatureElements getSizeFeatureAccess() {
+		return (pSizeFeature != null) ? pSizeFeature : (pSizeFeature = new SizeFeatureElements());
+	}
+	
+	public ParserRule getSizeFeatureRule() {
+		return getSizeFeatureAccess().getRule();
+	}
+
+	//TypeFeature:
+	//	name="type" "=" value=STRING;
+	public TypeFeatureElements getTypeFeatureAccess() {
+		return (pTypeFeature != null) ? pTypeFeature : (pTypeFeature = new TypeFeatureElements());
+	}
+	
+	public ParserRule getTypeFeatureRule() {
+		return getTypeFeatureAccess().getRule();
+	}
+
+	//Cable:
+	//	name=ID "{" colorFeature=ColorFeature networkFeature=NetWorkFeature lengthFeature=LengthFeature "}";
+	public CableElements getCableAccess() {
+		return (pCable != null) ? pCable : (pCable = new CableElements());
+	}
+	
+	public ParserRule getCableRule() {
+		return getCableAccess().getRule();
+	}
+
+	//PriceRule:
+	//	"rule" name=ID ("extends" superType=[MinMax|QualifiedName])? "{" features+=Feature* "}";
+	public PriceRuleElements getPriceRuleAccess() {
+		return (pPriceRule != null) ? pPriceRule : (pPriceRule = new PriceRuleElements());
+	}
+	
+	public ParserRule getPriceRuleRule() {
+		return getPriceRuleAccess().getRule();
 	}
 
 	//Entity:
-	//	"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
-	//	lengthFeature=LengthFeature features+=Feature* "}";
+	//	"puid" name=ID ("extends" superType=[SuperEntity|QualifiedName])? "{" features+=Feature* "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}
 	
 	public ParserRule getEntityRule() {
 		return getEntityAccess().getRule();
+	}
+
+	//QualifiedName:
+	//	ID ("." ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return (pQualifiedName != null) ? pQualifiedName : (pQualifiedName = new QualifiedNameElements());
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
 	}
 
 	//enum Color:
@@ -568,6 +1124,16 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getColorFeatureRule() {
 		return getColorFeatureAccess().getRule();
+	}
+
+	//SuperEntity:
+	//	Cable | Drive;
+	public SuperEntityElements getSuperEntityAccess() {
+		return (pSuperEntity != null) ? pSuperEntity : (pSuperEntity = new SuperEntityElements());
+	}
+	
+	public ParserRule getSuperEntityRule() {
+		return getSuperEntityAccess().getRule();
 	}
 
 	//terminal ID:

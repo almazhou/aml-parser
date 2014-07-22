@@ -41,13 +41,103 @@ public interface AmlFactory extends EFactory
   AbstractElements createAbstractElements();
 
   /**
-   * Returns a new object of class '<em>Super Entity</em>'.
+   * Returns a new object of class '<em>Min Max</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Super Entity</em>'.
+   * @return a new object of class '<em>Min Max</em>'.
    * @generated
    */
-  SuperEntity createSuperEntity();
+  MinMax createMinMax();
+
+  /**
+   * Returns a new object of class '<em>Max Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Max Feature</em>'.
+   * @generated
+   */
+  MaxFeature createMaxFeature();
+
+  /**
+   * Returns a new object of class '<em>Product PUID Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Product PUID Feature</em>'.
+   * @generated
+   */
+  ProductPUIDFeature createProductPUIDFeature();
+
+  /**
+   * Returns a new object of class '<em>Target Group Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Target Group Feature</em>'.
+   * @generated
+   */
+  TargetGroupFeature createTargetGroupFeature();
+
+  /**
+   * Returns a new object of class '<em>Drive</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Drive</em>'.
+   * @generated
+   */
+  Drive createDrive();
+
+  /**
+   * Returns a new object of class '<em>Form Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Form Feature</em>'.
+   * @generated
+   */
+  FormFeature createFormFeature();
+
+  /**
+   * Returns a new object of class '<em>Speed Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Speed Feature</em>'.
+   * @generated
+   */
+  SpeedFeature createSpeedFeature();
+
+  /**
+   * Returns a new object of class '<em>Size Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Size Feature</em>'.
+   * @generated
+   */
+  SizeFeature createSizeFeature();
+
+  /**
+   * Returns a new object of class '<em>Type Feature</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Feature</em>'.
+   * @generated
+   */
+  TypeFeature createTypeFeature();
+
+  /**
+   * Returns a new object of class '<em>Cable</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Cable</em>'.
+   * @generated
+   */
+  Cable createCable();
+
+  /**
+   * Returns a new object of class '<em>Price Rule</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Price Rule</em>'.
+   * @generated
+   */
+  PriceRule createPriceRule();
 
   /**
    * Returns a new object of class '<em>Entity</em>'.
@@ -93,6 +183,15 @@ public interface AmlFactory extends EFactory
    * @generated
    */
   ColorFeature createColorFeature();
+
+  /**
+   * Returns a new object of class '<em>Super Entity</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Super Entity</em>'.
+   * @generated
+   */
+  SuperEntity createSuperEntity();
 
   /**
    * Returns the package supported by this factory.

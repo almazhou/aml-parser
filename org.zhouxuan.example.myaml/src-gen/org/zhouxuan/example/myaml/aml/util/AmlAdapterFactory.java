@@ -85,9 +85,59 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
         return createAbstractElementsAdapter();
       }
       @Override
-      public Adapter caseSuperEntity(SuperEntity object)
+      public Adapter caseMinMax(MinMax object)
       {
-        return createSuperEntityAdapter();
+        return createMinMaxAdapter();
+      }
+      @Override
+      public Adapter caseMaxFeature(MaxFeature object)
+      {
+        return createMaxFeatureAdapter();
+      }
+      @Override
+      public Adapter caseProductPUIDFeature(ProductPUIDFeature object)
+      {
+        return createProductPUIDFeatureAdapter();
+      }
+      @Override
+      public Adapter caseTargetGroupFeature(TargetGroupFeature object)
+      {
+        return createTargetGroupFeatureAdapter();
+      }
+      @Override
+      public Adapter caseDrive(Drive object)
+      {
+        return createDriveAdapter();
+      }
+      @Override
+      public Adapter caseFormFeature(FormFeature object)
+      {
+        return createFormFeatureAdapter();
+      }
+      @Override
+      public Adapter caseSpeedFeature(SpeedFeature object)
+      {
+        return createSpeedFeatureAdapter();
+      }
+      @Override
+      public Adapter caseSizeFeature(SizeFeature object)
+      {
+        return createSizeFeatureAdapter();
+      }
+      @Override
+      public Adapter caseTypeFeature(TypeFeature object)
+      {
+        return createTypeFeatureAdapter();
+      }
+      @Override
+      public Adapter caseCable(Cable object)
+      {
+        return createCableAdapter();
+      }
+      @Override
+      public Adapter casePriceRule(PriceRule object)
+      {
+        return createPriceRuleAdapter();
       }
       @Override
       public Adapter caseEntity(Entity object)
@@ -113,6 +163,11 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
       public Adapter caseColorFeature(ColorFeature object)
       {
         return createColorFeatureAdapter();
+      }
+      @Override
+      public Adapter caseSuperEntity(SuperEntity object)
+      {
+        return createSuperEntityAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -167,16 +222,166 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.MinMax <em>Min Max</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.zhouxuan.example.myaml.aml.SuperEntity
+   * @see org.zhouxuan.example.myaml.aml.MinMax
    * @generated
    */
-  public Adapter createSuperEntityAdapter()
+  public Adapter createMinMaxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.MaxFeature <em>Max Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.MaxFeature
+   * @generated
+   */
+  public Adapter createMaxFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.ProductPUIDFeature <em>Product PUID Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.ProductPUIDFeature
+   * @generated
+   */
+  public Adapter createProductPUIDFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.TargetGroupFeature <em>Target Group Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.TargetGroupFeature
+   * @generated
+   */
+  public Adapter createTargetGroupFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.Drive <em>Drive</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.Drive
+   * @generated
+   */
+  public Adapter createDriveAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.FormFeature <em>Form Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.FormFeature
+   * @generated
+   */
+  public Adapter createFormFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.SpeedFeature <em>Speed Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.SpeedFeature
+   * @generated
+   */
+  public Adapter createSpeedFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.SizeFeature <em>Size Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.SizeFeature
+   * @generated
+   */
+  public Adapter createSizeFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.TypeFeature <em>Type Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.TypeFeature
+   * @generated
+   */
+  public Adapter createTypeFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.Cable <em>Cable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.Cable
+   * @generated
+   */
+  public Adapter createCableAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.PriceRule <em>Price Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.PriceRule
+   * @generated
+   */
+  public Adapter createPriceRuleAdapter()
   {
     return null;
   }
@@ -252,6 +457,21 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createColorFeatureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.SuperEntity
+   * @generated
+   */
+  public Adapter createSuperEntityAdapter()
   {
     return null;
   }

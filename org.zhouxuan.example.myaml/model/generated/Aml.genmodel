@@ -7,11 +7,6 @@
     editorPluginID="org.zhouxuan.example.myaml.editor" runtimeVersion="2.10">
   <genPackages prefix="Aml" basePackage="org.zhouxuan.example.myaml" disposableProviderFactory="true"
       fileExtensions="aml" ecorePackage="Aml.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Aml.ecore#//SuperNames">
-      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//SuperNames/Cable"/>
-      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//SuperNames/Driver"/>
-      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//SuperNames/MaxMin"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Aml.ecore#//Color">
       <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Red"/>
       <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Black"/>
@@ -22,16 +17,59 @@
     <genClasses ecoreClass="Aml.ecore#//Aml">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Aml/elements"/>
     </genClasses>
-    <genClasses ecoreClass="Aml.ecore#//AbstractElements"/>
-    <genClasses ecoreClass="Aml.ecore#//SuperEntity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//SuperEntity/name"/>
+    <genClasses ecoreClass="Aml.ecore#//AbstractElements">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//AbstractElements/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//MinMax">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//MinMax/targetGroupFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//MinMax/productPuidsFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//MinMax/maxFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//MaxFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//MaxFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//MaxFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//ProductPUIDFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ProductPUIDFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ProductPUIDFeature/values"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//TargetGroupFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//TargetGroupFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//TargetGroupFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//Drive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Drive/typeFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Drive/sizeFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Drive/speedFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Drive/formFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//FormFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//FormFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//FormFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//SpeedFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//SpeedFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//SpeedFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//SizeFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//SizeFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//SizeFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//TypeFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//TypeFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//TypeFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//Cable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Cable/colorFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Cable/networkFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Cable/lengthFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//PriceRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Aml.ecore#//PriceRule/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//PriceRule/features"/>
     </genClasses>
     <genClasses ecoreClass="Aml.ecore#//Entity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Entity/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/superType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/colorFeature"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/networkFeature"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/lengthFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/superType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/features"/>
     </genClasses>
     <genClasses ecoreClass="Aml.ecore#//Feature">
@@ -50,5 +88,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ColorFeature/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ColorFeature/value"/>
     </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//SuperEntity"/>
   </genPackages>
 </genmodel:GenModel>
