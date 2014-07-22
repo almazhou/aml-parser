@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.zhouxuan.example.myaml/src-gen" editDirectory="/org.zhouxuan.example.myaml.edit/src"
+    editorDirectory="/org.zhouxuan.example.myaml.editor/src" modelPluginID="org.zhouxuan.example.myaml"
+    forceOverwrite="true" modelName="Aml" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.zhouxuan.example.myaml.edit"
+    editorPluginID="org.zhouxuan.example.myaml.editor" runtimeVersion="2.10">
+  <genPackages prefix="Aml" basePackage="org.zhouxuan.example.myaml" disposableProviderFactory="true"
+      fileExtensions="aml" ecorePackage="Aml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Aml.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Red"/>
+      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Black"/>
+      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/White"/>
+      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Grey"/>
+      <genEnumLiterals ecoreEnumLiteral="Aml.ecore#//Color/Green"/>
+    </genEnums>
+    <genClasses ecoreClass="Aml.ecore#//Aml">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Aml/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Entity/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/features"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Feature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//LenghtFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//LenghtFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//NetWorkFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//NetWorkFeature/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Aml.ecore#//ColorFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ColorFeature/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

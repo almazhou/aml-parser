@@ -1,0 +1,39 @@
+grammar org.zhouxuan.example.myaml.Aml with org.eclipse.xtext.common.Terminals
+
+generate aml "http://www.zhouxuan.org/example/myaml/Aml"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Aml hidden(WS, ML_COMMENT, SL_COMMENT):
+	(elements += Entity)*
+;
+
+Entity:
+	'puid' name = INT ('extends' superType = [Entity])? '{'
+		(features += Feature)*
+	'}'	
+;
+
+enum Color :
+	Red | Black | White | Grey | Green;
+
+Feature:
+	ColorFeature | NetWorkFeature | LenghtFeature	
+;
+
+LenghtFeature:
+	name = ID '=' value = DOUBLE	
+;
+
+DOUBLE returns ecore::EDouble:
+    INT '.' INT
+;
+
+NetWorkFeature:
+	name = ID '=' value = ID	
+;
+
+ColorFeature:
+	name = ID '=' value= Color
+;
+
