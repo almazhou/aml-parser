@@ -27,6 +27,9 @@ public class InternalAmlLexer extends Lexer {
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
     public static final int RULE_INT=4;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -54,10 +57,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:11:7: ( 'Red' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:11:9: 'Red'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:11:7: ( 'Cable' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:11:9: 'Cable'
             {
-            match("Red"); 
+            match("Cable"); 
 
 
             }
@@ -75,10 +78,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:12:7: ( 'Black' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:12:9: 'Black'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:12:7: ( 'Driver' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:12:9: 'Driver'
             {
-            match("Black"); 
+            match("Driver"); 
 
 
             }
@@ -96,10 +99,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:13:7: ( 'White' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:13:9: 'White'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:13:7: ( 'MaxMin' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:13:9: 'MaxMin'
             {
-            match("White"); 
+            match("MaxMin"); 
 
 
             }
@@ -117,10 +120,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:14:7: ( 'Grey' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:14:9: 'Grey'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:14:7: ( 'Red' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:14:9: 'Red'
             {
-            match("Grey"); 
+            match("Red"); 
 
 
             }
@@ -138,10 +141,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:15:7: ( 'Green' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:15:9: 'Green'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:15:7: ( 'Black' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:15:9: 'Black'
             {
-            match("Green"); 
+            match("Black"); 
 
 
             }
@@ -159,10 +162,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:16:7: ( 'puid' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:16:9: 'puid'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:16:7: ( 'White' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:16:9: 'White'
             {
-            match("puid"); 
+            match("White"); 
 
 
             }
@@ -180,10 +183,11 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:17:7: ( '{' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:17:9: '{'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:17:7: ( 'Grey' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:17:9: 'Grey'
             {
-            match('{'); 
+            match("Grey"); 
+
 
             }
 
@@ -200,10 +204,11 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:18:7: ( '}' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:18:9: '}'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:18:7: ( 'Green' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:18:9: 'Green'
             {
-            match('}'); 
+            match("Green"); 
+
 
             }
 
@@ -220,10 +225,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:19:7: ( 'extends' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:19:9: 'extends'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:19:7: ( 'puid' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:19:9: 'puid'
             {
-            match("extends"); 
+            match("puid"); 
 
 
             }
@@ -241,10 +246,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:20:7: ( '=' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:20:9: '='
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:20:7: ( '{' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:20:9: '{'
             {
-            match('='); 
+            match('{'); 
 
             }
 
@@ -261,10 +266,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:21:7: ( ';' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:21:9: ';'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:21:7: ( '}' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:21:9: '}'
             {
-            match(';'); 
+            match('}'); 
 
             }
 
@@ -281,10 +286,11 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:22:7: ( '.' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:22:9: '.'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:22:7: ( 'extends' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:22:9: 'extends'
             {
-            match('.'); 
+            match("extends"); 
+
 
             }
 
@@ -301,11 +307,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:23:7: ( 'length' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:23:9: 'length'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:23:7: ( '=' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:23:9: '='
             {
-            match("length"); 
-
+            match('='); 
 
             }
 
@@ -322,11 +327,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:24:7: ( 'network' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:24:9: 'network'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:24:7: ( ';' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:24:9: ';'
             {
-            match("network"); 
-
+            match(';'); 
 
             }
 
@@ -343,8 +347,70 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:25:7: ( 'color' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:25:9: 'color'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:25:7: ( '.' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:25:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__25"
+
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:26:7: ( 'length' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:26:9: 'length'
+            {
+            match("length"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:27:7: ( 'network' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:27:9: 'network'
+            {
+            match("network"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:28:7: ( 'color' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:28:9: 'color'
             {
             match("color"); 
 
@@ -357,17 +423,17 @@ public class InternalAmlLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__25"
+    // $ANTLR end "T__28"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1534:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1534:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1673:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1673:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1534:11: ( '^' )?
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1673:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -376,7 +442,7 @@ public class InternalAmlLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1534:11: '^'
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1673:11: '^'
                     {
                     match('^'); 
 
@@ -394,7 +460,7 @@ public class InternalAmlLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1534:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1673:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -443,10 +509,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1536:10: ( ( '0' .. '9' )+ )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1536:12: ( '0' .. '9' )+
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1675:10: ( ( '0' .. '9' )+ )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1675:12: ( '0' .. '9' )+
             {
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1536:12: ( '0' .. '9' )+
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1675:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -460,7 +526,7 @@ public class InternalAmlLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1536:13: '0' .. '9'
+            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1675:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -492,10 +558,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -513,10 +579,10 @@ public class InternalAmlLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -532,7 +598,7 @@ public class InternalAmlLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -548,7 +614,7 @@ public class InternalAmlLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -573,10 +639,10 @@ public class InternalAmlLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -592,7 +658,7 @@ public class InternalAmlLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -608,7 +674,7 @@ public class InternalAmlLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1538:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1677:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -651,12 +717,12 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1540:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1540:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1679:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1679:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1540:24: ( options {greedy=false; } : . )*
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1679:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -681,7 +747,7 @@ public class InternalAmlLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1540:52: .
+            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1679:52: .
             	    {
             	    matchAny(); 
 
@@ -711,12 +777,12 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -729,7 +795,7 @@ public class InternalAmlLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -749,7 +815,7 @@ public class InternalAmlLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:40: ( ( '\\r' )? '\\n' )?
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -758,9 +824,9 @@ public class InternalAmlLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:41: ( '\\r' )? '\\n'
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:41: ( '\\r' )?
+                    // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -769,7 +835,7 @@ public class InternalAmlLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1542:41: '\\r'
+                            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1681:41: '\\r'
                             {
                             match('\r'); 
 
@@ -801,10 +867,10 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1544:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1544:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1683:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1683:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1544:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1683:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -858,8 +924,8 @@ public class InternalAmlLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1546:16: ( . )
-            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1546:18: .
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1685:16: ( . )
+            // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1685:18: .
             {
             matchAny(); 
 
@@ -874,8 +940,8 @@ public class InternalAmlLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=22;
+        // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=25;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -984,49 +1050,70 @@ public class InternalAmlLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:100: RULE_ID
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:100: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 17 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:106: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 18 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:112: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 19 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:118: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 17 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:108: RULE_INT
+            case 20 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:126: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 18 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:117: RULE_STRING
+            case 21 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:135: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 19 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:129: RULE_ML_COMMENT
+            case 22 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:147: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 20 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:145: RULE_SL_COMMENT
+            case 23 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:163: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 21 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:161: RULE_WS
+            case 24 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:179: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 22 :
-                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:169: RULE_ANY_OTHER
+            case 25 :
+                // ../org.zhouxuan.example.myaml.ui/src-gen/org/zhouxuan/example/myaml/ui/contentassist/antlr/internal/InternalAml.g:1:187: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1040,122 +1127,145 @@ public class InternalAmlLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\5\30\2\uffff\1\30\3\uffff\3\30\1\26\2\uffff\3\26\2\uffff"+
-        "\1\30\1\uffff\4\30\2\uffff\1\30\3\uffff\3\30\5\uffff\1\64\10\30"+
-        "\1\uffff\2\30\1\100\1\30\1\102\4\30\1\107\1\110\1\uffff\1\111\1"+
-        "\uffff\3\30\1\115\3\uffff\1\30\1\117\1\30\1\uffff\1\121\1\uffff"+
-        "\1\122\2\uffff";
+        "\1\uffff\10\33\2\uffff\1\33\3\uffff\3\33\1\31\2\uffff\3\31\2\uffff"+
+        "\1\33\1\uffff\7\33\2\uffff\1\33\3\uffff\3\33\5\uffff\3\33\1\100"+
+        "\13\33\1\uffff\2\33\1\117\1\33\1\121\4\33\1\126\2\33\1\131\1\132"+
+        "\1\uffff\1\133\1\uffff\3\33\1\137\1\uffff\1\140\1\141\3\uffff\1"+
+        "\33\1\143\1\33\3\uffff\1\145\1\uffff\1\146\2\uffff";
     static final String DFA12_eofS =
-        "\123\uffff";
+        "\147\uffff";
     static final String DFA12_minS =
-        "\1\0\1\145\1\154\1\150\1\162\1\165\2\uffff\1\170\3\uffff\2\145\1"+
-        "\157\1\101\2\uffff\2\0\1\52\2\uffff\1\144\1\uffff\1\141\1\151\1"+
-        "\145\1\151\2\uffff\1\164\3\uffff\1\156\1\164\1\154\5\uffff\1\60"+
-        "\1\143\1\164\1\145\1\144\1\145\1\147\1\167\1\157\1\uffff\1\153\1"+
-        "\145\1\60\1\156\1\60\1\156\1\164\1\157\1\162\2\60\1\uffff\1\60\1"+
-        "\uffff\1\144\1\150\1\162\1\60\3\uffff\1\163\1\60\1\153\1\uffff\1"+
-        "\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\141\1\162\1\141\1\145\1\154\1\150\1\162\1\165\2\uffff\1\170"+
+        "\3\uffff\2\145\1\157\1\101\2\uffff\2\0\1\52\2\uffff\1\142\1\uffff"+
+        "\1\151\1\170\1\144\1\141\1\151\1\145\1\151\2\uffff\1\164\3\uffff"+
+        "\1\156\1\164\1\154\5\uffff\1\154\1\166\1\115\1\60\1\143\1\164\1"+
+        "\145\1\144\1\145\1\147\1\167\1\157\2\145\1\151\1\uffff\1\153\1\145"+
+        "\1\60\1\156\1\60\1\156\1\164\1\157\1\162\1\60\1\162\1\156\2\60\1"+
+        "\uffff\1\60\1\uffff\1\144\1\150\1\162\1\60\1\uffff\2\60\3\uffff"+
+        "\1\163\1\60\1\153\3\uffff\1\60\1\uffff\1\60\2\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\145\1\154\1\150\1\162\1\165\2\uffff\1\170\3\uffff\2\145"+
-        "\1\157\1\172\2\uffff\2\uffff\1\57\2\uffff\1\144\1\uffff\1\141\1"+
-        "\151\1\145\1\151\2\uffff\1\164\3\uffff\1\156\1\164\1\154\5\uffff"+
-        "\1\172\1\143\1\164\1\171\1\144\1\145\1\147\1\167\1\157\1\uffff\1"+
-        "\153\1\145\1\172\1\156\1\172\1\156\1\164\1\157\1\162\2\172\1\uffff"+
-        "\1\172\1\uffff\1\144\1\150\1\162\1\172\3\uffff\1\163\1\172\1\153"+
-        "\1\uffff\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\141\1\162\1\141\1\145\1\154\1\150\1\162\1\165\2\uffff"+
+        "\1\170\3\uffff\2\145\1\157\1\172\2\uffff\2\uffff\1\57\2\uffff\1"+
+        "\142\1\uffff\1\151\1\170\1\144\1\141\1\151\1\145\1\151\2\uffff\1"+
+        "\164\3\uffff\1\156\1\164\1\154\5\uffff\1\154\1\166\1\115\1\172\1"+
+        "\143\1\164\1\171\1\144\1\145\1\147\1\167\1\157\2\145\1\151\1\uffff"+
+        "\1\153\1\145\1\172\1\156\1\172\1\156\1\164\1\157\1\162\1\172\1\162"+
+        "\1\156\2\172\1\uffff\1\172\1\uffff\1\144\1\150\1\162\1\172\1\uffff"+
+        "\2\172\3\uffff\1\163\1\172\1\153\3\uffff\1\172\1\uffff\1\172\2\uffff";
     static final String DFA12_acceptS =
-        "\6\uffff\1\7\1\10\1\uffff\1\12\1\13\1\14\4\uffff\1\20\1\21\3\uffff"+
-        "\1\25\1\26\1\uffff\1\20\4\uffff\1\7\1\10\1\uffff\1\12\1\13\1\14"+
-        "\3\uffff\1\21\1\22\1\23\1\24\1\25\11\uffff\1\1\13\uffff\1\4\1\uffff"+
-        "\1\6\4\uffff\1\2\1\3\1\5\3\uffff\1\17\1\uffff\1\15\1\uffff\1\11"+
-        "\1\16";
+        "\11\uffff\1\12\1\13\1\uffff\1\15\1\16\1\17\4\uffff\1\23\1\24\3\uffff"+
+        "\1\30\1\31\1\uffff\1\23\7\uffff\1\12\1\13\1\uffff\1\15\1\16\1\17"+
+        "\3\uffff\1\24\1\25\1\26\1\27\1\30\17\uffff\1\4\16\uffff\1\7\1\uffff"+
+        "\1\11\4\uffff\1\1\2\uffff\1\5\1\6\1\10\3\uffff\1\22\1\2\1\3\1\uffff"+
+        "\1\20\1\uffff\1\14\1\21";
     static final String DFA12_specialS =
-        "\1\2\21\uffff\1\0\1\1\77\uffff}>";
+        "\1\1\24\uffff\1\0\1\2\120\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\6\26\1"+
-            "\13\1\24\12\21\1\26\1\12\1\26\1\11\3\26\1\20\1\2\4\20\1\4\12"+
-            "\20\1\1\4\20\1\3\3\20\3\26\1\17\1\20\1\26\2\20\1\16\1\20\1\10"+
-            "\6\20\1\14\1\20\1\15\1\20\1\5\12\20\1\6\1\26\1\7\uff82\26",
-            "\1\27",
-            "\1\31",
+            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\6\31\1"+
+            "\16\1\27\12\24\1\31\1\15\1\31\1\14\3\31\1\23\1\5\1\1\1\2\2\23"+
+            "\1\7\5\23\1\3\4\23\1\4\4\23\1\6\3\23\3\31\1\22\1\23\1\31\2\23"+
+            "\1\21\1\23\1\13\6\23\1\17\1\23\1\20\1\23\1\10\12\23\1\11\1\31"+
+            "\1\12\uff82\31",
             "\1\32",
-            "\1\33",
             "\1\34",
-            "",
-            "",
+            "\1\35",
+            "\1\36",
             "\1\37",
+            "\1\40",
+            "\1\41",
+            "\1\42",
             "",
             "",
-            "",
-            "\1\43",
-            "\1\44",
             "\1\45",
-            "\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "",
-            "\0\47",
-            "\0\47",
-            "\1\50\4\uffff\1\51",
             "",
-            "",
+            "\1\51",
+            "\1\52",
             "\1\53",
-            "",
-            "\1\54",
-            "\1\55",
-            "\1\56",
-            "\1\57",
+            "\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
             "",
-            "\1\60",
-            "",
+            "\0\55",
+            "\0\55",
+            "\1\56\4\uffff\1\57",
             "",
             "",
             "\1\61",
+            "",
             "\1\62",
             "\1\63",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\64",
             "\1\65",
             "\1\66",
-            "\1\70\23\uffff\1\67",
+            "\1\67",
+            "\1\70",
+            "",
+            "",
             "\1\71",
+            "",
+            "",
+            "",
             "\1\72",
             "\1\73",
             "\1\74",
-            "\1\75",
             "",
+            "",
+            "",
+            "",
+            "",
+            "\1\75",
             "\1\76",
             "\1\77",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\101",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\1\103",
-            "\1\104",
+            "\1\102",
+            "\1\104\23\uffff\1\103",
             "\1\105",
             "\1\106",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
+            "\1\107",
+            "\1\110",
+            "\1\111",
             "\1\112",
             "\1\113",
             "\1\114",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
-            "",
-            "",
+            "\1\115",
             "\1\116",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\120",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\122",
+            "\1\123",
+            "\1\124",
+            "\1\125",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\127",
+            "\1\130",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\134",
+            "\1\135",
+            "\1\136",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "",
+            "",
+            "",
+            "\1\142",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\144",
+            "",
+            "",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
             ""
     };
@@ -1190,79 +1300,85 @@ public class InternalAmlLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_18 = input.LA(1);
+                        int LA12_21 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 39;}
+                        if ( ((LA12_21>='\u0000' && LA12_21<='\uFFFF')) ) {s = 45;}
 
-                        else s = 22;
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_19 = input.LA(1);
+                        int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 39;}
+                        if ( (LA12_0=='C') ) {s = 1;}
 
-                        else s = 22;
+                        else if ( (LA12_0=='D') ) {s = 2;}
+
+                        else if ( (LA12_0=='M') ) {s = 3;}
+
+                        else if ( (LA12_0=='R') ) {s = 4;}
+
+                        else if ( (LA12_0=='B') ) {s = 5;}
+
+                        else if ( (LA12_0=='W') ) {s = 6;}
+
+                        else if ( (LA12_0=='G') ) {s = 7;}
+
+                        else if ( (LA12_0=='p') ) {s = 8;}
+
+                        else if ( (LA12_0=='{') ) {s = 9;}
+
+                        else if ( (LA12_0=='}') ) {s = 10;}
+
+                        else if ( (LA12_0=='e') ) {s = 11;}
+
+                        else if ( (LA12_0=='=') ) {s = 12;}
+
+                        else if ( (LA12_0==';') ) {s = 13;}
+
+                        else if ( (LA12_0=='.') ) {s = 14;}
+
+                        else if ( (LA12_0=='l') ) {s = 15;}
+
+                        else if ( (LA12_0=='n') ) {s = 16;}
+
+                        else if ( (LA12_0=='c') ) {s = 17;}
+
+                        else if ( (LA12_0=='^') ) {s = 18;}
+
+                        else if ( (LA12_0=='A'||(LA12_0>='E' && LA12_0<='F')||(LA12_0>='H' && LA12_0<='L')||(LA12_0>='N' && LA12_0<='Q')||(LA12_0>='S' && LA12_0<='V')||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='b')||LA12_0=='d'||(LA12_0>='f' && LA12_0<='k')||LA12_0=='m'||LA12_0=='o'||(LA12_0>='q' && LA12_0<='z')) ) {s = 19;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 20;}
+
+                        else if ( (LA12_0=='\"') ) {s = 21;}
+
+                        else if ( (LA12_0=='\'') ) {s = 22;}
+
+                        else if ( (LA12_0=='/') ) {s = 23;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 24;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||LA12_0==':'||LA12_0=='<'||(LA12_0>='>' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 25;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_0 = input.LA(1);
+                        int LA12_22 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='R') ) {s = 1;}
+                        if ( ((LA12_22>='\u0000' && LA12_22<='\uFFFF')) ) {s = 45;}
 
-                        else if ( (LA12_0=='B') ) {s = 2;}
-
-                        else if ( (LA12_0=='W') ) {s = 3;}
-
-                        else if ( (LA12_0=='G') ) {s = 4;}
-
-                        else if ( (LA12_0=='p') ) {s = 5;}
-
-                        else if ( (LA12_0=='{') ) {s = 6;}
-
-                        else if ( (LA12_0=='}') ) {s = 7;}
-
-                        else if ( (LA12_0=='e') ) {s = 8;}
-
-                        else if ( (LA12_0=='=') ) {s = 9;}
-
-                        else if ( (LA12_0==';') ) {s = 10;}
-
-                        else if ( (LA12_0=='.') ) {s = 11;}
-
-                        else if ( (LA12_0=='l') ) {s = 12;}
-
-                        else if ( (LA12_0=='n') ) {s = 13;}
-
-                        else if ( (LA12_0=='c') ) {s = 14;}
-
-                        else if ( (LA12_0=='^') ) {s = 15;}
-
-                        else if ( (LA12_0=='A'||(LA12_0>='C' && LA12_0<='F')||(LA12_0>='H' && LA12_0<='Q')||(LA12_0>='S' && LA12_0<='V')||(LA12_0>='X' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='b')||LA12_0=='d'||(LA12_0>='f' && LA12_0<='k')||LA12_0=='m'||LA12_0=='o'||(LA12_0>='q' && LA12_0<='z')) ) {s = 16;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
-
-                        else if ( (LA12_0=='\"') ) {s = 18;}
-
-                        else if ( (LA12_0=='\'') ) {s = 19;}
-
-                        else if ( (LA12_0=='/') ) {s = 20;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='-')||LA12_0==':'||LA12_0=='<'||(LA12_0>='>' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;

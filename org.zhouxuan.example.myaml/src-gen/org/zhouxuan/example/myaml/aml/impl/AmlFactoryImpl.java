@@ -66,6 +66,8 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
     switch (eClass.getClassifierID())
     {
       case AmlPackage.AML: return createAml();
+      case AmlPackage.ABSTRACT_ELEMENTS: return createAbstractElements();
+      case AmlPackage.SUPER_ENTITY: return createSuperEntity();
       case AmlPackage.ENTITY: return createEntity();
       case AmlPackage.FEATURE: return createFeature();
       case AmlPackage.LENGTH_FEATURE: return createLengthFeature();
@@ -86,6 +88,8 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case AmlPackage.SUPER_NAMES:
+        return createSuperNamesFromString(eDataType, initialValue);
       case AmlPackage.COLOR:
         return createColorFromString(eDataType, initialValue);
       default:
@@ -103,6 +107,8 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     switch (eDataType.getClassifierID())
     {
+      case AmlPackage.SUPER_NAMES:
+        return convertSuperNamesToString(eDataType, instanceValue);
       case AmlPackage.COLOR:
         return convertColorToString(eDataType, instanceValue);
       default:
@@ -119,6 +125,28 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     AmlImpl aml = new AmlImpl();
     return aml;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbstractElements createAbstractElements()
+  {
+    AbstractElementsImpl abstractElements = new AbstractElementsImpl();
+    return abstractElements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperEntity createSuperEntity()
+  {
+    SuperEntityImpl superEntity = new SuperEntityImpl();
+    return superEntity;
   }
 
   /**
@@ -174,6 +202,28 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
   {
     ColorFeatureImpl colorFeature = new ColorFeatureImpl();
     return colorFeature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperNames createSuperNamesFromString(EDataType eDataType, String initialValue)
+  {
+    SuperNames result = SuperNames.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertSuperNamesToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

@@ -80,6 +80,16 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
         return createAmlAdapter();
       }
       @Override
+      public Adapter caseAbstractElements(AbstractElements object)
+      {
+        return createAbstractElementsAdapter();
+      }
+      @Override
+      public Adapter caseSuperEntity(SuperEntity object)
+      {
+        return createSuperEntityAdapter();
+      }
+      @Override
       public Adapter caseEntity(Entity object)
       {
         return createEntityAdapter();
@@ -137,6 +147,36 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAmlAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.AbstractElements <em>Abstract Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.AbstractElements
+   * @generated
+   */
+  public Adapter createAbstractElementsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.zhouxuan.example.myaml.aml.SuperEntity
+   * @generated
+   */
+  public Adapter createSuperEntityAdapter()
   {
     return null;
   }

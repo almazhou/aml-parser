@@ -37,6 +37,8 @@ public class AmlParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getAbstractElementsAccess().getAlternatives(), "rule__AbstractElements__Alternatives");
+					put(grammarAccess.getSuperNamesAccess().getAlternatives(), "rule__SuperNames__Alternatives");
 					put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getEntityAccess().getGroup_2(), "rule__Entity__Group_2__0");
@@ -46,6 +48,7 @@ public class AmlParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNetWorkFeatureAccess().getGroup(), "rule__NetWorkFeature__Group__0");
 					put(grammarAccess.getColorFeatureAccess().getGroup(), "rule__ColorFeature__Group__0");
 					put(grammarAccess.getAmlAccess().getElementsAssignment(), "rule__Aml__ElementsAssignment");
+					put(grammarAccess.getSuperEntityAccess().getNameAssignment(), "rule__SuperEntity__NameAssignment");
 					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
 					put(grammarAccess.getEntityAccess().getSuperTypeAssignment_2_1(), "rule__Entity__SuperTypeAssignment_2_1");
 					put(grammarAccess.getEntityAccess().getColorFeatureAssignment_4(), "rule__Entity__ColorFeatureAssignment_4");

@@ -88,9 +88,9 @@ ruleAml returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAmlAccess().getElementsEntityParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getAmlAccess().getElementsAbstractElementsParserRuleCall_0()); 
 	    }
-		lv_elements_0_0=ruleEntity		{
+		lv_elements_0_0=ruleAbstractElements		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAmlRule());
 	        }
@@ -98,7 +98,7 @@ ruleAml returns [EObject current=null]
        			$current, 
        			"elements",
         		lv_elements_0_0, 
-        		"Entity");
+        		"AbstractElements");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -108,6 +108,85 @@ ruleAml returns [EObject current=null]
 finally {
 	myHiddenTokenState.restore();
 }
+
+
+
+
+
+// Entry rule entryRuleAbstractElements
+entryRuleAbstractElements returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getAbstractElementsRule()); }
+	 iv_ruleAbstractElements=ruleAbstractElements 
+	 { $current=$iv_ruleAbstractElements.current; } 
+	 EOF 
+;
+
+// Rule AbstractElements
+ruleAbstractElements returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getAbstractElementsAccess().getEntityParserRuleCall_0()); 
+    }
+    this_Entity_0=ruleEntity
+    { 
+        $current = $this_Entity_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getAbstractElementsAccess().getSuperEntityParserRuleCall_1()); 
+    }
+    this_SuperEntity_1=ruleSuperEntity
+    { 
+        $current = $this_SuperEntity_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleSuperEntity
+entryRuleSuperEntity returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSuperEntityRule()); }
+	 iv_ruleSuperEntity=ruleSuperEntity 
+	 { $current=$iv_ruleSuperEntity.current; } 
+	 EOF 
+;
+
+// Rule SuperEntity
+ruleSuperEntity returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSuperEntityAccess().getNameSuperNamesEnumRuleCall_0()); 
+	    }
+		lv_name_0_0=ruleSuperNames		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSuperEntityRule());
+	        }
+       		set(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"SuperNames");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)
+;
 
 
 
@@ -133,9 +212,9 @@ ruleEntity returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_INT
+		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getEntityAccess().getNameINTTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -145,7 +224,7 @@ ruleEntity returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"INT");
+        		"ID");
 	    }
 
 )
@@ -155,15 +234,20 @@ ruleEntity returns [EObject current=null]
     }
 (
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getEntityRule());
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getSuperTypeSuperEntityParserRuleCall_2_1_0()); 
+	    }
+		lv_superType_3_0=ruleSuperEntity		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
 	        }
-        }
-	otherlv_3=RULE_ID
-	{
-		newLeafNode(otherlv_3, grammarAccess.getEntityAccess().getSuperTypeEntityCrossReference_2_1_0()); 
-	}
+       		set(
+       			$current, 
+       			"superType",
+        		lv_superType_3_0, 
+        		"SuperEntity");
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 ))?	otherlv_4='{' 
@@ -542,6 +626,31 @@ ruleColorFeature returns [EObject current=null]
 ;
 
 
+
+
+
+// Rule SuperNames
+ruleSuperNames returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='Cable' 
+	{
+        $current = grammarAccess.getSuperNamesAccess().getCableEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getSuperNamesAccess().getCableEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='Driver' 
+	{
+        $current = grammarAccess.getSuperNamesAccess().getDriverEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getSuperNamesAccess().getDriverEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='MaxMin' 
+	{
+        $current = grammarAccess.getSuperNamesAccess().getMaxMinEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getSuperNamesAccess().getMaxMinEnumLiteralDeclaration_2()); 
+    }
+));
 
 
 

@@ -4,8 +4,6 @@ package org.zhouxuan.example.myaml.aml;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Entity</b></em>'.
@@ -27,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Entity extends EObject
+public interface Entity extends AbstractElements
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -38,12 +36,12 @@ public interface Entity extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(int)
+   * @see #setName(String)
    * @see org.zhouxuan.example.myaml.aml.AmlPackage#getEntity_Name()
    * @model
    * @generated
    */
-  int getName();
+  String getName();
 
   /**
    * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.Entity#getName <em>Name</em>}' attribute.
@@ -53,33 +51,33 @@ public interface Entity extends EObject
    * @see #getName()
    * @generated
    */
-  void setName(int value);
+  void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Super Type</b></em>' reference.
+   * Returns the value of the '<em><b>Super Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Super Type</em>' reference isn't clear,
+   * If the meaning of the '<em>Super Type</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Super Type</em>' reference.
-   * @see #setSuperType(Entity)
+   * @return the value of the '<em>Super Type</em>' containment reference.
+   * @see #setSuperType(SuperEntity)
    * @see org.zhouxuan.example.myaml.aml.AmlPackage#getEntity_SuperType()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  Entity getSuperType();
+  SuperEntity getSuperType();
 
   /**
-   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}' reference.
+   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Super Type</em>' reference.
+   * @param value the new value of the '<em>Super Type</em>' containment reference.
    * @see #getSuperType()
    * @generated
    */
-  void setSuperType(Entity value);
+  void setSuperType(SuperEntity value);
 
   /**
    * Returns the value of the '<em><b>Color Feature</b></em>' containment reference.

@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -24,6 +23,7 @@ import org.zhouxuan.example.myaml.aml.Entity;
 import org.zhouxuan.example.myaml.aml.Feature;
 import org.zhouxuan.example.myaml.aml.LengthFeature;
 import org.zhouxuan.example.myaml.aml.NetWorkFeature;
+import org.zhouxuan.example.myaml.aml.SuperEntity;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ import org.zhouxuan.example.myaml.aml.NetWorkFeature;
  *
  * @generated
  */
-public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
+public class EntityImpl extends AbstractElementsImpl implements Entity
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -53,7 +53,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * @generated
    * @ordered
    */
-  protected static final int NAME_EDEFAULT = 0;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -63,17 +63,17 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * @generated
    * @ordered
    */
-  protected int name = NAME_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' reference.
+   * The cached value of the '{@link #getSuperType() <em>Super Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSuperType()
    * @generated
    * @ordered
    */
-  protected Entity superType;
+  protected SuperEntity superType;
 
   /**
    * The cached value of the '{@link #getColorFeature() <em>Color Feature</em>}' containment reference.
@@ -141,7 +141,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getName()
+  public String getName()
   {
     return name;
   }
@@ -151,9 +151,9 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(int newName)
+  public void setName(String newName)
   {
-    int oldName = name;
+    String oldName = name;
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.ENTITY__NAME, oldName, name));
@@ -164,27 +164,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity getSuperType()
-  {
-    if (superType != null && superType.eIsProxy())
-    {
-      InternalEObject oldSuperType = (InternalEObject)superType;
-      superType = (Entity)eResolveProxy(oldSuperType);
-      if (superType != oldSuperType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AmlPackage.ENTITY__SUPER_TYPE, oldSuperType, superType));
-      }
-    }
-    return superType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Entity basicGetSuperType()
+  public SuperEntity getSuperType()
   {
     return superType;
   }
@@ -194,12 +174,37 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSuperType(Entity newSuperType)
+  public NotificationChain basicSetSuperType(SuperEntity newSuperType, NotificationChain msgs)
   {
-    Entity oldSuperType = superType;
+    SuperEntity oldSuperType = superType;
     superType = newSuperType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.ENTITY__SUPER_TYPE, oldSuperType, superType));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AmlPackage.ENTITY__SUPER_TYPE, oldSuperType, newSuperType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSuperType(SuperEntity newSuperType)
+  {
+    if (newSuperType != superType)
+    {
+      NotificationChain msgs = null;
+      if (superType != null)
+        msgs = ((InternalEObject)superType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AmlPackage.ENTITY__SUPER_TYPE, null, msgs);
+      if (newSuperType != null)
+        msgs = ((InternalEObject)newSuperType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AmlPackage.ENTITY__SUPER_TYPE, null, msgs);
+      msgs = basicSetSuperType(newSuperType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.ENTITY__SUPER_TYPE, newSuperType, newSuperType));
   }
 
   /**
@@ -370,6 +375,8 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
   {
     switch (featureID)
     {
+      case AmlPackage.ENTITY__SUPER_TYPE:
+        return basicSetSuperType(null, msgs);
       case AmlPackage.ENTITY__COLOR_FEATURE:
         return basicSetColorFeature(null, msgs);
       case AmlPackage.ENTITY__NETWORK_FEATURE:
@@ -395,8 +402,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
       case AmlPackage.ENTITY__NAME:
         return getName();
       case AmlPackage.ENTITY__SUPER_TYPE:
-        if (resolve) return getSuperType();
-        return basicGetSuperType();
+        return getSuperType();
       case AmlPackage.ENTITY__COLOR_FEATURE:
         return getColorFeature();
       case AmlPackage.ENTITY__NETWORK_FEATURE:
@@ -421,10 +427,10 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
     switch (featureID)
     {
       case AmlPackage.ENTITY__NAME:
-        setName((Integer)newValue);
+        setName((String)newValue);
         return;
       case AmlPackage.ENTITY__SUPER_TYPE:
-        setSuperType((Entity)newValue);
+        setSuperType((SuperEntity)newValue);
         return;
       case AmlPackage.ENTITY__COLOR_FEATURE:
         setColorFeature((ColorFeature)newValue);
@@ -457,7 +463,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
         setName(NAME_EDEFAULT);
         return;
       case AmlPackage.ENTITY__SUPER_TYPE:
-        setSuperType((Entity)null);
+        setSuperType((SuperEntity)null);
         return;
       case AmlPackage.ENTITY__COLOR_FEATURE:
         setColorFeature((ColorFeature)null);
@@ -486,7 +492,7 @@ public class EntityImpl extends MinimalEObjectImpl.Container implements Entity
     switch (featureID)
     {
       case AmlPackage.ENTITY__NAME:
-        return name != NAME_EDEFAULT;
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case AmlPackage.ENTITY__SUPER_TYPE:
         return superType != null;
       case AmlPackage.ENTITY__COLOR_FEATURE:

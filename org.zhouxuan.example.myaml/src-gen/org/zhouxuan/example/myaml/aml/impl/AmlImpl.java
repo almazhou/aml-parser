@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.zhouxuan.example.myaml.aml.AbstractElements;
 import org.zhouxuan.example.myaml.aml.Aml;
 import org.zhouxuan.example.myaml.aml.AmlPackage;
-import org.zhouxuan.example.myaml.aml.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,7 +43,7 @@ public class AmlImpl extends MinimalEObjectImpl.Container implements Aml
    * @generated
    * @ordered
    */
-  protected EList<Entity> elements;
+  protected EList<AbstractElements> elements;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,11 +71,11 @@ public class AmlImpl extends MinimalEObjectImpl.Container implements Aml
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Entity> getElements()
+  public EList<AbstractElements> getElements()
   {
     if (elements == null)
     {
-      elements = new EObjectContainmentEList<Entity>(Entity.class, this, AmlPackage.AML__ELEMENTS);
+      elements = new EObjectContainmentEList<AbstractElements>(AbstractElements.class, this, AmlPackage.AML__ELEMENTS);
     }
     return elements;
   }
@@ -125,7 +125,7 @@ public class AmlImpl extends MinimalEObjectImpl.Container implements Aml
     {
       case AmlPackage.AML__ELEMENTS:
         getElements().clear();
-        getElements().addAll((Collection<? extends Entity>)newValue);
+        getElements().addAll((Collection<? extends AbstractElements>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

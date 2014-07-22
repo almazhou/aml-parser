@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.zhouxuan.example.myaml.aml.AbstractElements;
 import org.zhouxuan.example.myaml.aml.Aml;
 import org.zhouxuan.example.myaml.aml.AmlFactory;
 import org.zhouxuan.example.myaml.aml.AmlPackage;
@@ -19,6 +20,8 @@ import org.zhouxuan.example.myaml.aml.Entity;
 import org.zhouxuan.example.myaml.aml.Feature;
 import org.zhouxuan.example.myaml.aml.LengthFeature;
 import org.zhouxuan.example.myaml.aml.NetWorkFeature;
+import org.zhouxuan.example.myaml.aml.SuperEntity;
+import org.zhouxuan.example.myaml.aml.SuperNames;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +37,20 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * @generated
    */
   private EClass amlEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass abstractElementsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass superEntityEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,6 +86,13 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * @generated
    */
   private EClass colorFeatureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum superNamesEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,6 +182,36 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
   public EReference getAml_Elements()
   {
     return (EReference)amlEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAbstractElements()
+  {
+    return abstractElementsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSuperEntity()
+  {
+    return superEntityEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSuperEntity_Name()
+  {
+    return (EAttribute)superEntityEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -355,6 +409,16 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getSuperNames()
+  {
+    return superNamesEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getColor()
   {
     return colorEEnum;
@@ -393,6 +457,11 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     amlEClass = createEClass(AML);
     createEReference(amlEClass, AML__ELEMENTS);
 
+    abstractElementsEClass = createEClass(ABSTRACT_ELEMENTS);
+
+    superEntityEClass = createEClass(SUPER_ENTITY);
+    createEAttribute(superEntityEClass, SUPER_ENTITY__NAME);
+
     entityEClass = createEClass(ENTITY);
     createEAttribute(entityEClass, ENTITY__NAME);
     createEReference(entityEClass, ENTITY__SUPER_TYPE);
@@ -418,6 +487,7 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     createEAttribute(colorFeatureEClass, COLOR_FEATURE__VALUE);
 
     // Create enums
+    superNamesEEnum = createEEnum(SUPER_NAMES);
     colorEEnum = createEEnum(COLOR);
   }
 
@@ -450,14 +520,21 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    superEntityEClass.getESuperTypes().add(this.getAbstractElements());
+    entityEClass.getESuperTypes().add(this.getAbstractElements());
 
     // Initialize classes and features; add operations and parameters
     initEClass(amlEClass, Aml.class, "Aml", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAml_Elements(), this.getEntity(), null, "elements", null, 0, -1, Aml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAml_Elements(), this.getAbstractElements(), null, "elements", null, 0, -1, Aml.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(abstractElementsEClass, AbstractElements.class, "AbstractElements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(superEntityEClass, SuperEntity.class, "SuperEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSuperEntity_Name(), this.getSuperNames(), "name", null, 0, 1, SuperEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEntity_Name(), ecorePackage.getEInt(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEntity_SuperType(), this.getEntity(), null, "superType", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEntity_SuperType(), this.getSuperEntity(), null, "superType", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEntity_ColorFeature(), this.getColorFeature(), null, "colorFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEntity_NetworkFeature(), this.getNetWorkFeature(), null, "networkFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEntity_LengthFeature(), this.getLengthFeature(), null, "lengthFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -480,6 +557,11 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     initEAttribute(getColorFeature_Value(), this.getColor(), "value", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
+    initEEnum(superNamesEEnum, SuperNames.class, "SuperNames");
+    addEEnumLiteral(superNamesEEnum, SuperNames.CABLE);
+    addEEnumLiteral(superNamesEEnum, SuperNames.DRIVER);
+    addEEnumLiteral(superNamesEEnum, SuperNames.MAX_MIN);
+
     initEEnum(colorEEnum, Color.class, "Color");
     addEEnumLiteral(colorEEnum, Color.RED);
     addEEnumLiteral(colorEEnum, Color.BLACK);

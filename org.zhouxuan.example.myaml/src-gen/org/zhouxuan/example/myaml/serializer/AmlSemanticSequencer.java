@@ -20,6 +20,7 @@ import org.zhouxuan.example.myaml.aml.Entity;
 import org.zhouxuan.example.myaml.aml.Feature;
 import org.zhouxuan.example.myaml.aml.LengthFeature;
 import org.zhouxuan.example.myaml.aml.NetWorkFeature;
+import org.zhouxuan.example.myaml.aml.SuperEntity;
 import org.zhouxuan.example.myaml.services.AmlGrammarAccess;
 
 @SuppressWarnings("all")
@@ -43,7 +44,8 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case AmlPackage.ENTITY:
-				if(context == grammarAccess.getEntityRule()) {
+				if(context == grammarAccess.getAbstractElementsRule() ||
+				   context == grammarAccess.getEntityRule()) {
 					sequence_Entity(context, (Entity) semanticObject); 
 					return; 
 				}
@@ -66,13 +68,20 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
+			case AmlPackage.SUPER_ENTITY:
+				if(context == grammarAccess.getAbstractElementsRule() ||
+				   context == grammarAccess.getSuperEntityRule()) {
+					sequence_SuperEntity(context, (SuperEntity) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     elements+=Entity*
+	 *     elements+=AbstractElements*
 	 */
 	protected void sequence_Aml(EObject context, Aml semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -101,8 +110,8 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         name=INT 
-	 *         superType=[Entity|ID]? 
+	 *         name=ID 
+	 *         superType=SuperEntity? 
 	 *         colorFeature=ColorFeature 
 	 *         networkFeature=NetWorkFeature 
 	 *         lengthFeature=LengthFeature 
@@ -167,6 +176,22 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getNetWorkFeatureAccess().getNameNetworkKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getNetWorkFeatureAccess().getValueIDTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=SuperNames
+	 */
+	protected void sequence_SuperEntity(EObject context, SuperEntity semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.SUPER_ENTITY__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.SUPER_ENTITY__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSuperEntityAccess().getNameSuperNamesEnumRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 }

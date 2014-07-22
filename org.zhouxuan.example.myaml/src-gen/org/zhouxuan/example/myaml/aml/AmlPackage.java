@@ -86,14 +86,33 @@ public interface AmlPackage extends EPackage
   int AML_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.EntityImpl <em>Entity</em>}' class.
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.AbstractElementsImpl <em>Abstract Elements</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.zhouxuan.example.myaml.aml.impl.EntityImpl
-   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getEntity()
+   * @see org.zhouxuan.example.myaml.aml.impl.AbstractElementsImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getAbstractElements()
    * @generated
    */
-  int ENTITY = 1;
+  int ABSTRACT_ELEMENTS = 1;
+
+  /**
+   * The number of structural features of the '<em>Abstract Elements</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_ELEMENTS_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl <em>Super Entity</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperEntity()
+   * @generated
+   */
+  int SUPER_ENTITY = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,16 +121,44 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__NAME = 0;
+  int SUPER_ENTITY__NAME = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * The number of structural features of the '<em>Super Entity</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENTITY__SUPER_TYPE = 1;
+  int SUPER_ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.EntityImpl <em>Entity</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.impl.EntityImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getEntity()
+   * @generated
+   */
+  int ENTITY = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__NAME = ABSTRACT_ELEMENTS_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__SUPER_TYPE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Color Feature</b></em>' containment reference.
@@ -120,7 +167,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__COLOR_FEATURE = 2;
+  int ENTITY__COLOR_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Network Feature</b></em>' containment reference.
@@ -129,7 +176,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__NETWORK_FEATURE = 3;
+  int ENTITY__NETWORK_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Length Feature</b></em>' containment reference.
@@ -138,7 +185,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__LENGTH_FEATURE = 4;
+  int ENTITY__LENGTH_FEATURE = ABSTRACT_ELEMENTS_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -147,7 +194,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY__FEATURES = 5;
+  int ENTITY__FEATURES = ABSTRACT_ELEMENTS_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Entity</em>' class.
@@ -156,7 +203,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY_FEATURE_COUNT = 6;
+  int ENTITY_FEATURE_COUNT = ABSTRACT_ELEMENTS_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.FeatureImpl <em>Feature</em>}' class.
@@ -166,7 +213,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getFeature()
    * @generated
    */
-  int FEATURE = 2;
+  int FEATURE = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -203,7 +250,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLengthFeature()
    * @generated
    */
-  int LENGTH_FEATURE = 3;
+  int LENGTH_FEATURE = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -240,7 +287,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getNetWorkFeature()
    * @generated
    */
-  int NET_WORK_FEATURE = 4;
+  int NET_WORK_FEATURE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -277,7 +324,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getColorFeature()
    * @generated
    */
-  int COLOR_FEATURE = 5;
+  int COLOR_FEATURE = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -307,6 +354,16 @@ public interface AmlPackage extends EPackage
   int COLOR_FEATURE_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.zhouxuan.example.myaml.aml.SuperNames
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperNames()
+   * @generated
+   */
+  int SUPER_NAMES = 8;
+
+  /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -314,7 +371,7 @@ public interface AmlPackage extends EPackage
    * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 6;
+  int COLOR = 9;
 
 
   /**
@@ -339,6 +396,37 @@ public interface AmlPackage extends EPackage
   EReference getAml_Elements();
 
   /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.AbstractElements <em>Abstract Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Abstract Elements</em>'.
+   * @see org.zhouxuan.example.myaml.aml.AbstractElements
+   * @generated
+   */
+  EClass getAbstractElements();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.SuperEntity <em>Super Entity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Super Entity</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SuperEntity
+   * @generated
+   */
+  EClass getSuperEntity();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.SuperEntity#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SuperEntity#getName()
+   * @see #getSuperEntity()
+   * @generated
+   */
+  EAttribute getSuperEntity_Name();
+
+  /**
    * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.Entity <em>Entity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -360,10 +448,10 @@ public interface AmlPackage extends EPackage
   EAttribute getEntity_Name();
 
   /**
-   * Returns the meta object for the reference '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getSuperType <em>Super Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @return the meta object for the containment reference '<em>Super Type</em>'.
    * @see org.zhouxuan.example.myaml.aml.Entity#getSuperType()
    * @see #getEntity()
    * @generated
@@ -543,6 +631,16 @@ public interface AmlPackage extends EPackage
   EAttribute getColorFeature_Value();
 
   /**
+   * Returns the meta object for enum '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Super Names</em>'.
+   * @see org.zhouxuan.example.myaml.aml.SuperNames
+   * @generated
+   */
+  EEnum getSuperNames();
+
+  /**
    * Returns the meta object for enum '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -594,6 +692,34 @@ public interface AmlPackage extends EPackage
     EReference AML__ELEMENTS = eINSTANCE.getAml_Elements();
 
     /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.AbstractElementsImpl <em>Abstract Elements</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.AbstractElementsImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getAbstractElements()
+     * @generated
+     */
+    EClass ABSTRACT_ELEMENTS = eINSTANCE.getAbstractElements();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl <em>Super Entity</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.SuperEntityImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperEntity()
+     * @generated
+     */
+    EClass SUPER_ENTITY = eINSTANCE.getSuperEntity();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUPER_ENTITY__NAME = eINSTANCE.getSuperEntity_Name();
+
+    /**
      * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.EntityImpl <em>Entity</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -612,7 +738,7 @@ public interface AmlPackage extends EPackage
     EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
 
     /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Super Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -754,6 +880,16 @@ public interface AmlPackage extends EPackage
      * @generated
      */
     EAttribute COLOR_FEATURE__VALUE = eINSTANCE.getColorFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.SuperNames <em>Super Names</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.SuperNames
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getSuperNames()
+     * @generated
+     */
+    EEnum SUPER_NAMES = eINSTANCE.getSuperNames();
 
     /**
      * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}' enum.

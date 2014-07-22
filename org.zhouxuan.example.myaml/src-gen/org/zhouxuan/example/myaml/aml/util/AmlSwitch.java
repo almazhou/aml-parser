@@ -79,10 +79,26 @@ public class AmlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case AmlPackage.ABSTRACT_ELEMENTS:
+      {
+        AbstractElements abstractElements = (AbstractElements)theEObject;
+        T result = caseAbstractElements(abstractElements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AmlPackage.SUPER_ENTITY:
+      {
+        SuperEntity superEntity = (SuperEntity)theEObject;
+        T result = caseSuperEntity(superEntity);
+        if (result == null) result = caseAbstractElements(superEntity);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case AmlPackage.ENTITY:
       {
         Entity entity = (Entity)theEObject;
         T result = caseEntity(entity);
+        if (result == null) result = caseAbstractElements(entity);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -130,6 +146,38 @@ public class AmlSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAml(Aml object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Abstract Elements</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Abstract Elements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAbstractElements(AbstractElements object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Super Entity</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuperEntity(SuperEntity object)
   {
     return null;
   }

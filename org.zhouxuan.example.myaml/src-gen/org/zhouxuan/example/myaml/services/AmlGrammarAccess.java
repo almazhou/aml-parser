@@ -21,17 +21,53 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	public class AmlElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Aml");
 		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cElementsEntityParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
+		private final RuleCall cElementsAbstractElementsParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
 		
 		//Aml hidden(WS, ML_COMMENT, SL_COMMENT):
-		//	elements+=Entity*;
+		//	elements+=AbstractElements*;
 		public ParserRule getRule() { return rule; }
 
-		//elements+=Entity*
+		//elements+=AbstractElements*
 		public Assignment getElementsAssignment() { return cElementsAssignment; }
 
+		//AbstractElements
+		public RuleCall getElementsAbstractElementsParserRuleCall_0() { return cElementsAbstractElementsParserRuleCall_0; }
+	}
+
+	public class AbstractElementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AbstractElements");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cEntityParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSuperEntityParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//AbstractElements:
+		//	Entity | SuperEntity;
+		public ParserRule getRule() { return rule; }
+
+		//Entity | SuperEntity
+		public Alternatives getAlternatives() { return cAlternatives; }
+
 		//Entity
-		public RuleCall getElementsEntityParserRuleCall_0() { return cElementsEntityParserRuleCall_0; }
+		public RuleCall getEntityParserRuleCall_0() { return cEntityParserRuleCall_0; }
+
+		//SuperEntity
+		public RuleCall getSuperEntityParserRuleCall_1() { return cSuperEntityParserRuleCall_1; }
+	}
+
+	public class SuperEntityElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SuperEntity");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameSuperNamesEnumRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//SuperEntity:
+		//	name=SuperNames;
+		public ParserRule getRule() { return rule; }
+
+		//name=SuperNames
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//SuperNames
+		public RuleCall getNameSuperNamesEnumRuleCall_0() { return cNameSuperNamesEnumRuleCall_0; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
@@ -39,12 +75,11 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPuidKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameINTTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final CrossReference cSuperTypeEntityCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
-		private final RuleCall cSuperTypeEntityIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeEntityCrossReference_2_1_0.eContents().get(1);
+		private final RuleCall cSuperTypeSuperEntityParserRuleCall_2_1_0 = (RuleCall)cSuperTypeAssignment_2_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cColorFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cColorFeatureColorFeatureParserRuleCall_4_0 = (RuleCall)cColorFeatureAssignment_4.eContents().get(0);
@@ -57,37 +92,34 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Entity:
-		//	"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+		//	"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
 		//	lengthFeature=LengthFeature features+=Feature* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+		//"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
 		//lengthFeature=LengthFeature features+=Feature* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"puid"
 		public Keyword getPuidKeyword_0() { return cPuidKeyword_0; }
 
-		//name=INT
+		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//INT
-		public RuleCall getNameINTTerminalRuleCall_1_0() { return cNameINTTerminalRuleCall_1_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//("extends" superType=[Entity])?
+		//("extends" superType=SuperEntity)?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//"extends"
 		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
 
-		//superType=[Entity]
+		//superType=SuperEntity
 		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
 
-		//[Entity]
-		public CrossReference getSuperTypeEntityCrossReference_2_1_0() { return cSuperTypeEntityCrossReference_2_1_0; }
-
-		//ID
-		public RuleCall getSuperTypeEntityIDTerminalRuleCall_2_1_0_1() { return cSuperTypeEntityIDTerminalRuleCall_2_1_0_1; }
+		//SuperEntity
+		public RuleCall getSuperTypeSuperEntityParserRuleCall_2_1_0() { return cSuperTypeSuperEntityParserRuleCall_2_1_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -289,6 +321,42 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
+	public class SuperNamesElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "SuperNames");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cCableEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCableCableKeyword_0_0 = (Keyword)cCableEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cDriverEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cDriverDriverKeyword_1_0 = (Keyword)cDriverEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMaxMinEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMaxMinMaxMinKeyword_2_0 = (Keyword)cMaxMinEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum SuperNames:
+		//	Cable | Driver | MaxMin;
+		public EnumRule getRule() { return rule; }
+
+		//Cable | Driver | MaxMin
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Cable
+		public EnumLiteralDeclaration getCableEnumLiteralDeclaration_0() { return cCableEnumLiteralDeclaration_0; }
+
+		//"Cable"
+		public Keyword getCableCableKeyword_0_0() { return cCableCableKeyword_0_0; }
+
+		//Driver
+		public EnumLiteralDeclaration getDriverEnumLiteralDeclaration_1() { return cDriverEnumLiteralDeclaration_1; }
+
+		//"Driver"
+		public Keyword getDriverDriverKeyword_1_0() { return cDriverDriverKeyword_1_0; }
+
+		//MaxMin
+		public EnumLiteralDeclaration getMaxMinEnumLiteralDeclaration_2() { return cMaxMinEnumLiteralDeclaration_2; }
+
+		//"MaxMin"
+		public Keyword getMaxMinMaxMinKeyword_2_0() { return cMaxMinMaxMinKeyword_2_0; }
+	}
+
 	public class ColorElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -342,6 +410,9 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private AmlElements pAml;
+	private AbstractElementsElements pAbstractElements;
+	private SuperEntityElements pSuperEntity;
+	private SuperNamesElements unknownRuleSuperNames;
 	private EntityElements pEntity;
 	private ColorElements unknownRuleColor;
 	private FeatureElements pFeature;
@@ -389,7 +460,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Aml hidden(WS, ML_COMMENT, SL_COMMENT):
-	//	elements+=Entity*;
+	//	elements+=AbstractElements*;
 	public AmlElements getAmlAccess() {
 		return (pAml != null) ? pAml : (pAml = new AmlElements());
 	}
@@ -398,8 +469,38 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		return getAmlAccess().getRule();
 	}
 
+	//AbstractElements:
+	//	Entity | SuperEntity;
+	public AbstractElementsElements getAbstractElementsAccess() {
+		return (pAbstractElements != null) ? pAbstractElements : (pAbstractElements = new AbstractElementsElements());
+	}
+	
+	public ParserRule getAbstractElementsRule() {
+		return getAbstractElementsAccess().getRule();
+	}
+
+	//SuperEntity:
+	//	name=SuperNames;
+	public SuperEntityElements getSuperEntityAccess() {
+		return (pSuperEntity != null) ? pSuperEntity : (pSuperEntity = new SuperEntityElements());
+	}
+	
+	public ParserRule getSuperEntityRule() {
+		return getSuperEntityAccess().getRule();
+	}
+
+	//enum SuperNames:
+	//	Cable | Driver | MaxMin;
+	public SuperNamesElements getSuperNamesAccess() {
+		return (unknownRuleSuperNames != null) ? unknownRuleSuperNames : (unknownRuleSuperNames = new SuperNamesElements());
+	}
+	
+	public EnumRule getSuperNamesRule() {
+		return getSuperNamesAccess().getRule();
+	}
+
 	//Entity:
-	//	"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+	//	"puid" name=ID ("extends" superType=SuperEntity)? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
 	//	lengthFeature=LengthFeature features+=Feature* "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());

@@ -3,11 +3,21 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="aml" nsURI="http://www.zhouxuan.org/example/myaml/Aml" nsPrefix="aml">
   <eClassifiers xsi:type="ecore:EClass" name="Aml">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//Entity" containment="true"/>
+        eType="#//AbstractElements" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entity">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperEntity" eSuperTypes="#//AbstractElements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//SuperNames"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SuperNames">
+    <eLiterals name="Cable" literal="Cable"/>
+    <eLiterals name="Driver" value="1" literal="Driver"/>
+    <eLiterals name="MaxMin" value="2" literal="MaxMin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//AbstractElements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//SuperEntity"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="colorFeature" eType="#//ColorFeature"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="networkFeature" eType="#//NetWorkFeature"

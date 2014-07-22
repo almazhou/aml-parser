@@ -32,6 +32,24 @@ public interface AmlFactory extends EFactory
   Aml createAml();
 
   /**
+   * Returns a new object of class '<em>Abstract Elements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Abstract Elements</em>'.
+   * @generated
+   */
+  AbstractElements createAbstractElements();
+
+  /**
+   * Returns a new object of class '<em>Super Entity</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Super Entity</em>'.
+   * @generated
+   */
+  SuperEntity createSuperEntity();
+
+  /**
    * Returns a new object of class '<em>Entity</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
