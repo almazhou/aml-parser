@@ -10,23 +10,23 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.zhouxuan.example.myaml.aml.AmlPackage;
-import org.zhouxuan.example.myaml.aml.NetWorkFeature;
+import org.zhouxuan.example.myaml.aml.LengthFeature;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Net Work Feature</b></em>'.
+ * An implementation of the model object '<em><b>Length Feature</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.zhouxuan.example.myaml.aml.impl.NetWorkFeatureImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.zhouxuan.example.myaml.aml.impl.NetWorkFeatureImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements NetWorkFeature
+public class LengthFeatureImpl extends MinimalEObjectImpl.Container implements LengthFeature
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,7 +56,7 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final double VALUE_EDEFAULT = 0.0;
 
   /**
    * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -66,14 +66,14 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected double value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected NetWorkFeatureImpl()
+  protected LengthFeatureImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return AmlPackage.Literals.NET_WORK_FEATURE;
+    return AmlPackage.Literals.LENGTH_FEATURE;
   }
 
   /**
@@ -109,7 +109,7 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.NET_WORK_FEATURE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.LENGTH_FEATURE__NAME, oldName, name));
   }
 
   /**
@@ -117,7 +117,7 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getValue()
+  public double getValue()
   {
     return value;
   }
@@ -127,12 +127,12 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(String newValue)
+  public void setValue(double newValue)
   {
-    String oldValue = value;
+    double oldValue = value;
     value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.NET_WORK_FEATURE__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.LENGTH_FEATURE__VALUE, oldValue, value));
   }
 
   /**
@@ -145,9 +145,9 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case AmlPackage.NET_WORK_FEATURE__NAME:
+      case AmlPackage.LENGTH_FEATURE__NAME:
         return getName();
-      case AmlPackage.NET_WORK_FEATURE__VALUE:
+      case AmlPackage.LENGTH_FEATURE__VALUE:
         return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -163,11 +163,11 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case AmlPackage.NET_WORK_FEATURE__NAME:
+      case AmlPackage.LENGTH_FEATURE__NAME:
         setName((String)newValue);
         return;
-      case AmlPackage.NET_WORK_FEATURE__VALUE:
-        setValue((String)newValue);
+      case AmlPackage.LENGTH_FEATURE__VALUE:
+        setValue((Double)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,10 +183,10 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case AmlPackage.NET_WORK_FEATURE__NAME:
+      case AmlPackage.LENGTH_FEATURE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case AmlPackage.NET_WORK_FEATURE__VALUE:
+      case AmlPackage.LENGTH_FEATURE__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
     }
@@ -203,10 +203,10 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case AmlPackage.NET_WORK_FEATURE__NAME:
+      case AmlPackage.LENGTH_FEATURE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case AmlPackage.NET_WORK_FEATURE__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case AmlPackage.LENGTH_FEATURE__VALUE:
+        return value != VALUE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -230,4 +230,4 @@ public class NetWorkFeatureImpl extends MinimalEObjectImpl.Container implements 
     return result.toString();
   }
 
-} //NetWorkFeatureImpl
+} //LengthFeatureImpl

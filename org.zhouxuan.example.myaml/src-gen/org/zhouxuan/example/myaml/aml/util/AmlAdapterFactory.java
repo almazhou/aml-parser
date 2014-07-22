@@ -90,9 +90,9 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
         return createFeatureAdapter();
       }
       @Override
-      public Adapter caseLenghtFeature(LenghtFeature object)
+      public Adapter caseLengthFeature(LengthFeature object)
       {
-        return createLenghtFeatureAdapter();
+        return createLengthFeatureAdapter();
       }
       @Override
       public Adapter caseNetWorkFeature(NetWorkFeature object)
@@ -172,16 +172,16 @@ public class AmlAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.LenghtFeature <em>Lenght Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link org.zhouxuan.example.myaml.aml.LengthFeature <em>Length Feature</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.zhouxuan.example.myaml.aml.LenghtFeature
+   * @see org.zhouxuan.example.myaml.aml.LengthFeature
    * @generated
    */
-  public Adapter createLenghtFeatureAdapter()
+  public Adapter createLengthFeatureAdapter()
   {
     return null;
   }

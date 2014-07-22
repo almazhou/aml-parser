@@ -50,13 +50,13 @@ public interface AmlFactory extends EFactory
   Feature createFeature();
 
   /**
-   * Returns a new object of class '<em>Lenght Feature</em>'.
+   * Returns a new object of class '<em>Length Feature</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lenght Feature</em>'.
+   * @return a new object of class '<em>Length Feature</em>'.
    * @generated
    */
-  LenghtFeature createLenghtFeature();
+  LengthFeature createLengthFeature();
 
   /**
    * Returns a new object of class '<em>Net Work Feature</em>'.

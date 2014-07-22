@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Feature</b></em>'.
+ * A representation of the model object '<em><b>Length Feature</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.zhouxuan.example.myaml.aml.Feature#getName <em>Name</em>}</li>
- *   <li>{@link org.zhouxuan.example.myaml.aml.Feature#getValue <em>Value</em>}</li>
+ *   <li>{@link org.zhouxuan.example.myaml.aml.LengthFeature#getName <em>Name</em>}</li>
+ *   <li>{@link org.zhouxuan.example.myaml.aml.LengthFeature#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.zhouxuan.example.myaml.aml.AmlPackage#getFeature()
+ * @see org.zhouxuan.example.myaml.aml.AmlPackage#getLengthFeature()
  * @model
  * @generated
  */
-public interface Feature extends EObject
+public interface LengthFeature extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface Feature extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see org.zhouxuan.example.myaml.aml.AmlPackage#getFeature_Name()
+   * @see org.zhouxuan.example.myaml.aml.AmlPackage#getLengthFeature_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.Feature#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.LengthFeature#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -58,21 +58,21 @@ public interface Feature extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see org.zhouxuan.example.myaml.aml.AmlPackage#getFeature_Value()
+   * @see #setValue(double)
+   * @see org.zhouxuan.example.myaml.aml.AmlPackage#getLengthFeature_Value()
    * @model
    * @generated
    */
-  String getValue();
+  double getValue();
 
   /**
-   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.Feature#getValue <em>Value</em>}' attribute.
+   * Sets the value of the '{@link org.zhouxuan.example.myaml.aml.LengthFeature#getValue <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Value</em>' attribute.
    * @see #getValue()
    * @generated
    */
-  void setValue(String value);
+  void setValue(double value);
 
-} // Feature
+} // LengthFeature

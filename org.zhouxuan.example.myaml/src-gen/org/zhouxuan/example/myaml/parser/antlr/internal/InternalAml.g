@@ -173,24 +173,78 @@ ruleEntity returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getEntityAccess().getFeaturesFeatureParserRuleCall_4_0()); 
+	        newCompositeNode(grammarAccess.getEntityAccess().getColorFeatureColorFeatureParserRuleCall_4_0()); 
 	    }
-		lv_features_5_0=ruleFeature		{
+		lv_colorFeature_5_0=ruleColorFeature		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
+	        }
+       		set(
+       			$current, 
+       			"colorFeature",
+        		lv_colorFeature_5_0, 
+        		"ColorFeature");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getNetworkFeatureNetWorkFeatureParserRuleCall_5_0()); 
+	    }
+		lv_networkFeature_6_0=ruleNetWorkFeature		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
+	        }
+       		set(
+       			$current, 
+       			"networkFeature",
+        		lv_networkFeature_6_0, 
+        		"NetWorkFeature");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getLengthFeatureLengthFeatureParserRuleCall_6_0()); 
+	    }
+		lv_lengthFeature_7_0=ruleLengthFeature		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getEntityRule());
+	        }
+       		set(
+       			$current, 
+       			"lengthFeature",
+        		lv_lengthFeature_7_0, 
+        		"LengthFeature");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getEntityAccess().getFeaturesFeatureParserRuleCall_7_0()); 
+	    }
+		lv_features_8_0=ruleFeature		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getEntityRule());
 	        }
        		add(
        			$current, 
        			"features",
-        		lv_features_5_0, 
+        		lv_features_8_0, 
         		"Feature");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*	otherlv_6='}' 
+)*	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_9, grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_8());
     }
 )
 ;
@@ -213,65 +267,15 @@ ruleFeature returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getFeatureAccess().getColorFeatureParserRuleCall_0()); 
-    }
-    this_ColorFeature_0=ruleColorFeature
-    { 
-        $current = $this_ColorFeature_0.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getFeatureAccess().getNetWorkFeatureParserRuleCall_1()); 
-    }
-    this_NetWorkFeature_1=ruleNetWorkFeature
-    { 
-        $current = $this_NetWorkFeature_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getFeatureAccess().getLenghtFeatureParserRuleCall_2()); 
-    }
-    this_LenghtFeature_2=ruleLenghtFeature
-    { 
-        $current = $this_LenghtFeature_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleLenghtFeature
-entryRuleLenghtFeature returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getLenghtFeatureRule()); }
-	 iv_ruleLenghtFeature=ruleLenghtFeature 
-	 { $current=$iv_ruleLenghtFeature.current; } 
-	 EOF 
-;
-
-// Rule LenghtFeature
-ruleLenghtFeature returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
 ((
 (
 		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_0_0, grammarAccess.getLenghtFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
+			newLeafNode(lv_name_0_0, grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getLenghtFeatureRule());
+	            $current = createModelElement(grammarAccess.getFeatureRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -283,16 +287,78 @@ ruleLenghtFeature returns [EObject current=null]
 )
 )	otherlv_1='=' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getLenghtFeatureAccess().getEqualsSignKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getFeatureAccess().getEqualsSignKeyword_1());
+    }
+(
+(
+		lv_value_2_0=RULE_ID
+		{
+			newLeafNode(lv_value_2_0, grammarAccess.getFeatureAccess().getValueIDTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFeatureRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_2_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getFeatureAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleLengthFeature
+entryRuleLengthFeature returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLengthFeatureRule()); }
+	 iv_ruleLengthFeature=ruleLengthFeature 
+	 { $current=$iv_ruleLengthFeature.current; } 
+	 EOF 
+;
+
+// Rule LengthFeature
+ruleLengthFeature returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=	'length' 
+    {
+        newLeafNode(lv_name_0_0, grammarAccess.getLengthFeatureAccess().getNameLengthKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLengthFeatureRule());
+	        }
+       		setWithLastConsumed($current, "name", lv_name_0_0, "length");
+	    }
+
+)
+)	otherlv_1='=' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getLengthFeatureAccess().getEqualsSignKeyword_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLenghtFeatureAccess().getValueDOUBLEParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getLengthFeatureAccess().getValueDOUBLEParserRuleCall_2_0()); 
 	    }
 		lv_value_2_0=ruleDOUBLE		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLenghtFeatureRule());
+	            $current = createModelElementForParent(grammarAccess.getLengthFeatureRule());
 	        }
        		set(
        			$current, 
@@ -303,7 +369,11 @@ ruleLenghtFeature returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getLengthFeatureAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 
@@ -367,19 +437,16 @@ ruleNetWorkFeature returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getNetWorkFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		lv_name_0_0=	'network' 
+    {
+        newLeafNode(lv_name_0_0, grammarAccess.getNetWorkFeatureAccess().getNameNetworkKeyword_0_0());
+    }
+ 
+	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getNetWorkFeatureRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "network");
 	    }
 
 )
@@ -405,7 +472,11 @@ ruleNetWorkFeature returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getNetWorkFeatureAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 
@@ -428,19 +499,16 @@ ruleColorFeature returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getColorFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		lv_name_0_0=	'color' 
+    {
+        newLeafNode(lv_name_0_0, grammarAccess.getColorFeatureAccess().getNameColorKeyword_0_0());
+    }
+ 
+	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getColorFeatureRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "color");
 	    }
 
 )
@@ -466,7 +534,11 @@ ruleColorFeature returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_3=';' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getColorFeatureAccess().getSemicolonKeyword_3());
+    }
+)
 ;
 
 

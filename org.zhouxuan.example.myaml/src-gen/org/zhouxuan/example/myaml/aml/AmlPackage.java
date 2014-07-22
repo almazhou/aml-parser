@@ -114,13 +114,40 @@ public interface AmlPackage extends EPackage
   int ENTITY__SUPER_TYPE = 1;
 
   /**
+   * The feature id for the '<em><b>Color Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__COLOR_FEATURE = 2;
+
+  /**
+   * The feature id for the '<em><b>Network Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__NETWORK_FEATURE = 3;
+
+  /**
+   * The feature id for the '<em><b>Length Feature</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENTITY__LENGTH_FEATURE = 4;
+
+  /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENTITY__FEATURES = 2;
+  int ENTITY__FEATURES = 5;
 
   /**
    * The number of structural features of the '<em>Entity</em>' class.
@@ -129,7 +156,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY_FEATURE_COUNT = 3;
+  int ENTITY_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.FeatureImpl <em>Feature</em>}' class.
@@ -151,23 +178,32 @@ public interface AmlPackage extends EPackage
   int FEATURE__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__VALUE = 1;
+
+  /**
    * The number of structural features of the '<em>Feature</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURE_FEATURE_COUNT = 1;
+  int FEATURE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.LenghtFeatureImpl <em>Lenght Feature</em>}' class.
+   * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl <em>Length Feature</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.zhouxuan.example.myaml.aml.impl.LenghtFeatureImpl
-   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLenghtFeature()
+   * @see org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl
+   * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLengthFeature()
    * @generated
    */
-  int LENGHT_FEATURE = 3;
+  int LENGTH_FEATURE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -176,7 +212,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LENGHT_FEATURE__NAME = FEATURE__NAME;
+  int LENGTH_FEATURE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -185,16 +221,16 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LENGHT_FEATURE__VALUE = FEATURE_FEATURE_COUNT + 0;
+  int LENGTH_FEATURE__VALUE = 1;
 
   /**
-   * The number of structural features of the '<em>Lenght Feature</em>' class.
+   * The number of structural features of the '<em>Length Feature</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LENGHT_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+  int LENGTH_FEATURE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.NetWorkFeatureImpl <em>Net Work Feature</em>}' class.
@@ -213,7 +249,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NET_WORK_FEATURE__NAME = FEATURE__NAME;
+  int NET_WORK_FEATURE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -222,7 +258,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NET_WORK_FEATURE__VALUE = FEATURE_FEATURE_COUNT + 0;
+  int NET_WORK_FEATURE__VALUE = 1;
 
   /**
    * The number of structural features of the '<em>Net Work Feature</em>' class.
@@ -231,7 +267,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NET_WORK_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+  int NET_WORK_FEATURE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.impl.ColorFeatureImpl <em>Color Feature</em>}' class.
@@ -250,7 +286,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_FEATURE__NAME = FEATURE__NAME;
+  int COLOR_FEATURE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -259,7 +295,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_FEATURE__VALUE = FEATURE_FEATURE_COUNT + 0;
+  int COLOR_FEATURE__VALUE = 1;
 
   /**
    * The number of structural features of the '<em>Color Feature</em>' class.
@@ -268,7 +304,7 @@ public interface AmlPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COLOR_FEATURE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+  int COLOR_FEATURE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.zhouxuan.example.myaml.aml.Color <em>Color</em>}' enum.
@@ -335,6 +371,39 @@ public interface AmlPackage extends EPackage
   EReference getEntity_SuperType();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getColorFeature <em>Color Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Entity#getColorFeature()
+   * @see #getEntity()
+   * @generated
+   */
+  EReference getEntity_ColorFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getNetworkFeature <em>Network Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Network Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Entity#getNetworkFeature()
+   * @see #getEntity()
+   * @generated
+   */
+  EReference getEntity_NetworkFeature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.zhouxuan.example.myaml.aml.Entity#getLengthFeature <em>Length Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Length Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.Entity#getLengthFeature()
+   * @see #getEntity()
+   * @generated
+   */
+  EReference getEntity_LengthFeature();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.zhouxuan.example.myaml.aml.Entity#getFeatures <em>Features</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -367,25 +436,47 @@ public interface AmlPackage extends EPackage
   EAttribute getFeature_Name();
 
   /**
-   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.LenghtFeature <em>Lenght Feature</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lenght Feature</em>'.
-   * @see org.zhouxuan.example.myaml.aml.LenghtFeature
-   * @generated
-   */
-  EClass getLenghtFeature();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.LenghtFeature#getValue <em>Value</em>}'.
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.Feature#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.zhouxuan.example.myaml.aml.LenghtFeature#getValue()
-   * @see #getLenghtFeature()
+   * @see org.zhouxuan.example.myaml.aml.Feature#getValue()
+   * @see #getFeature()
    * @generated
    */
-  EAttribute getLenghtFeature_Value();
+  EAttribute getFeature_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.LengthFeature <em>Length Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Length Feature</em>'.
+   * @see org.zhouxuan.example.myaml.aml.LengthFeature
+   * @generated
+   */
+  EClass getLengthFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.LengthFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.LengthFeature#getName()
+   * @see #getLengthFeature()
+   * @generated
+   */
+  EAttribute getLengthFeature_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.LengthFeature#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.zhouxuan.example.myaml.aml.LengthFeature#getValue()
+   * @see #getLengthFeature()
+   * @generated
+   */
+  EAttribute getLengthFeature_Value();
 
   /**
    * Returns the meta object for class '{@link org.zhouxuan.example.myaml.aml.NetWorkFeature <em>Net Work Feature</em>}'.
@@ -396,6 +487,17 @@ public interface AmlPackage extends EPackage
    * @generated
    */
   EClass getNetWorkFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.NetWorkFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.NetWorkFeature#getName()
+   * @see #getNetWorkFeature()
+   * @generated
+   */
+  EAttribute getNetWorkFeature_Name();
 
   /**
    * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.NetWorkFeature#getValue <em>Value</em>}'.
@@ -417,6 +519,17 @@ public interface AmlPackage extends EPackage
    * @generated
    */
   EClass getColorFeature();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.ColorFeature#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.zhouxuan.example.myaml.aml.ColorFeature#getName()
+   * @see #getColorFeature()
+   * @generated
+   */
+  EAttribute getColorFeature_Name();
 
   /**
    * Returns the meta object for the attribute '{@link org.zhouxuan.example.myaml.aml.ColorFeature#getValue <em>Value</em>}'.
@@ -507,6 +620,30 @@ public interface AmlPackage extends EPackage
     EReference ENTITY__SUPER_TYPE = eINSTANCE.getEntity_SuperType();
 
     /**
+     * The meta object literal for the '<em><b>Color Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENTITY__COLOR_FEATURE = eINSTANCE.getEntity_ColorFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Network Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENTITY__NETWORK_FEATURE = eINSTANCE.getEntity_NetworkFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Length Feature</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ENTITY__LENGTH_FEATURE = eINSTANCE.getEntity_LengthFeature();
+
+    /**
      * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -533,14 +670,30 @@ public interface AmlPackage extends EPackage
     EAttribute FEATURE__NAME = eINSTANCE.getFeature_Name();
 
     /**
-     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.LenghtFeatureImpl <em>Lenght Feature</em>}' class.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.zhouxuan.example.myaml.aml.impl.LenghtFeatureImpl
-     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLenghtFeature()
      * @generated
      */
-    EClass LENGHT_FEATURE = eINSTANCE.getLenghtFeature();
+    EAttribute FEATURE__VALUE = eINSTANCE.getFeature_Value();
+
+    /**
+     * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl <em>Length Feature</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.zhouxuan.example.myaml.aml.impl.LengthFeatureImpl
+     * @see org.zhouxuan.example.myaml.aml.impl.AmlPackageImpl#getLengthFeature()
+     * @generated
+     */
+    EClass LENGTH_FEATURE = eINSTANCE.getLengthFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LENGTH_FEATURE__NAME = eINSTANCE.getLengthFeature_Name();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -548,7 +701,7 @@ public interface AmlPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LENGHT_FEATURE__VALUE = eINSTANCE.getLenghtFeature_Value();
+    EAttribute LENGTH_FEATURE__VALUE = eINSTANCE.getLengthFeature_Value();
 
     /**
      * The meta object literal for the '{@link org.zhouxuan.example.myaml.aml.impl.NetWorkFeatureImpl <em>Net Work Feature</em>}' class.
@@ -559,6 +712,14 @@ public interface AmlPackage extends EPackage
      * @generated
      */
     EClass NET_WORK_FEATURE = eINSTANCE.getNetWorkFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NET_WORK_FEATURE__NAME = eINSTANCE.getNetWorkFeature_Name();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -577,6 +738,14 @@ public interface AmlPackage extends EPackage
      * @generated
      */
     EClass COLOR_FEATURE = eINSTANCE.getColorFeature();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COLOR_FEATURE__NAME = eINSTANCE.getColorFeature_Name();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.

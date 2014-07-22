@@ -46,15 +46,23 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cSuperTypeEntityCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
 		private final RuleCall cSuperTypeEntityIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeEntityCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFeaturesFeatureParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cColorFeatureAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cColorFeatureColorFeatureParserRuleCall_4_0 = (RuleCall)cColorFeatureAssignment_4.eContents().get(0);
+		private final Assignment cNetworkFeatureAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cNetworkFeatureNetWorkFeatureParserRuleCall_5_0 = (RuleCall)cNetworkFeatureAssignment_5.eContents().get(0);
+		private final Assignment cLengthFeatureAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cLengthFeatureLengthFeatureParserRuleCall_6_0 = (RuleCall)cLengthFeatureAssignment_6.eContents().get(0);
+		private final Assignment cFeaturesAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cFeaturesFeatureParserRuleCall_7_0 = (RuleCall)cFeaturesAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Entity:
-		//	"puid" name=INT ("extends" superType=[Entity])? "{" features+=Feature* "}";
+		//	"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+		//	lengthFeature=LengthFeature features+=Feature* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"puid" name=INT ("extends" superType=[Entity])? "{" features+=Feature* "}"
+		//"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+		//lengthFeature=LengthFeature features+=Feature* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"puid"
@@ -84,54 +92,49 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
+		//colorFeature=ColorFeature
+		public Assignment getColorFeatureAssignment_4() { return cColorFeatureAssignment_4; }
+
+		//ColorFeature
+		public RuleCall getColorFeatureColorFeatureParserRuleCall_4_0() { return cColorFeatureColorFeatureParserRuleCall_4_0; }
+
+		//networkFeature=NetWorkFeature
+		public Assignment getNetworkFeatureAssignment_5() { return cNetworkFeatureAssignment_5; }
+
+		//NetWorkFeature
+		public RuleCall getNetworkFeatureNetWorkFeatureParserRuleCall_5_0() { return cNetworkFeatureNetWorkFeatureParserRuleCall_5_0; }
+
+		//lengthFeature=LengthFeature
+		public Assignment getLengthFeatureAssignment_6() { return cLengthFeatureAssignment_6; }
+
+		//LengthFeature
+		public RuleCall getLengthFeatureLengthFeatureParserRuleCall_6_0() { return cLengthFeatureLengthFeatureParserRuleCall_6_0; }
+
 		//features+=Feature*
-		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		public Assignment getFeaturesAssignment_7() { return cFeaturesAssignment_7; }
 
 		//Feature
-		public RuleCall getFeaturesFeatureParserRuleCall_4_0() { return cFeaturesFeatureParserRuleCall_4_0; }
+		public RuleCall getFeaturesFeatureParserRuleCall_7_0() { return cFeaturesFeatureParserRuleCall_7_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class FeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Feature");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cColorFeatureParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cNetWorkFeatureParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cLenghtFeatureParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		
-		//Feature:
-		//	ColorFeature | NetWorkFeature | LenghtFeature;
-		public ParserRule getRule() { return rule; }
-
-		//ColorFeature | NetWorkFeature | LenghtFeature
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//ColorFeature
-		public RuleCall getColorFeatureParserRuleCall_0() { return cColorFeatureParserRuleCall_0; }
-
-		//NetWorkFeature
-		public RuleCall getNetWorkFeatureParserRuleCall_1() { return cNetWorkFeatureParserRuleCall_1; }
-
-		//LenghtFeature
-		public RuleCall getLenghtFeatureParserRuleCall_2() { return cLenghtFeatureParserRuleCall_2; }
-	}
-
-	public class LenghtFeatureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LenghtFeature");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueDOUBLEParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final RuleCall cValueIDTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//LenghtFeature:
-		//	name=ID "=" value=DOUBLE;
+		//Feature:
+		//	name=ID "=" value=ID ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "=" value=DOUBLE
+		//name=ID "=" value=ID ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -143,11 +146,50 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
+		//value=ID
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+
+		//ID
+		public RuleCall getValueIDTerminalRuleCall_2_0() { return cValueIDTerminalRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class LengthFeatureElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LengthFeature");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameLengthKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueDOUBLEParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//LengthFeature:
+		//	name="length" "=" value=DOUBLE ";";
+		public ParserRule getRule() { return rule; }
+
+		//name="length" "=" value=DOUBLE ";"
+		public Group getGroup() { return cGroup; }
+
+		//name="length"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//"length"
+		public Keyword getNameLengthKeyword_0_0() { return cNameLengthKeyword_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
 		//value=DOUBLE
 		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 
 		//DOUBLE
 		public RuleCall getValueDOUBLEParserRuleCall_2_0() { return cValueDOUBLEParserRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class DOUBLEElements extends AbstractParserRuleElementFinder {
@@ -178,23 +220,24 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NetWorkFeature");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cNameNetworkKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cValueIDTerminalRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//NetWorkFeature:
-		//	name=ID "=" value=ID;
+		//	name="network" "=" value=ID ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "=" value=ID
+		//name="network" "=" value=ID ";"
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name="network"
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//"network"
+		public Keyword getNameNetworkKeyword_0_0() { return cNameNetworkKeyword_0_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
@@ -204,29 +247,33 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getValueIDTerminalRuleCall_2_0() { return cValueIDTerminalRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class ColorFeatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ColorFeature");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cNameColorKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cValueColorEnumRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ColorFeature:
-		//	name=ID "=" value=Color;
+		//	name="color" "=" value=Color ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "=" value=Color
+		//name="color" "=" value=Color ";"
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name="color"
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//"color"
+		public Keyword getNameColorKeyword_0_0() { return cNameColorKeyword_0_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
@@ -236,6 +283,9 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Color
 		public RuleCall getValueColorEnumRuleCall_2_0() { return cValueColorEnumRuleCall_2_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 	
 	
@@ -295,7 +345,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	private EntityElements pEntity;
 	private ColorElements unknownRuleColor;
 	private FeatureElements pFeature;
-	private LenghtFeatureElements pLenghtFeature;
+	private LengthFeatureElements pLengthFeature;
 	private DOUBLEElements pDOUBLE;
 	private NetWorkFeatureElements pNetWorkFeature;
 	private ColorFeatureElements pColorFeature;
@@ -349,7 +399,8 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entity:
-	//	"puid" name=INT ("extends" superType=[Entity])? "{" features+=Feature* "}";
+	//	"puid" name=INT ("extends" superType=[Entity])? "{" colorFeature=ColorFeature networkFeature=NetWorkFeature
+	//	lengthFeature=LengthFeature features+=Feature* "}";
 	public EntityElements getEntityAccess() {
 		return (pEntity != null) ? pEntity : (pEntity = new EntityElements());
 	}
@@ -369,7 +420,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Feature:
-	//	ColorFeature | NetWorkFeature | LenghtFeature;
+	//	name=ID "=" value=ID ";";
 	public FeatureElements getFeatureAccess() {
 		return (pFeature != null) ? pFeature : (pFeature = new FeatureElements());
 	}
@@ -378,14 +429,14 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureAccess().getRule();
 	}
 
-	//LenghtFeature:
-	//	name=ID "=" value=DOUBLE;
-	public LenghtFeatureElements getLenghtFeatureAccess() {
-		return (pLenghtFeature != null) ? pLenghtFeature : (pLenghtFeature = new LenghtFeatureElements());
+	//LengthFeature:
+	//	name="length" "=" value=DOUBLE ";";
+	public LengthFeatureElements getLengthFeatureAccess() {
+		return (pLengthFeature != null) ? pLengthFeature : (pLengthFeature = new LengthFeatureElements());
 	}
 	
-	public ParserRule getLenghtFeatureRule() {
-		return getLenghtFeatureAccess().getRule();
+	public ParserRule getLengthFeatureRule() {
+		return getLengthFeatureAccess().getRule();
 	}
 
 	//DOUBLE returns ecore::EDouble:
@@ -399,7 +450,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NetWorkFeature:
-	//	name=ID "=" value=ID;
+	//	name="network" "=" value=ID ";";
 	public NetWorkFeatureElements getNetWorkFeatureAccess() {
 		return (pNetWorkFeature != null) ? pNetWorkFeature : (pNetWorkFeature = new NetWorkFeatureElements());
 	}
@@ -409,7 +460,7 @@ public class AmlGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ColorFeature:
-	//	name=ID "=" value=Color;
+	//	name="color" "=" value=Color ";";
 	public ColorFeatureElements getColorFeatureAccess() {
 		return (pColorFeature != null) ? pColorFeature : (pColorFeature = new ColorFeatureElements());
 	}

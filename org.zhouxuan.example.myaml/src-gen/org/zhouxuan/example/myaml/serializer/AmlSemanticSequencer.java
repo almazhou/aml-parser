@@ -17,7 +17,8 @@ import org.zhouxuan.example.myaml.aml.Aml;
 import org.zhouxuan.example.myaml.aml.AmlPackage;
 import org.zhouxuan.example.myaml.aml.ColorFeature;
 import org.zhouxuan.example.myaml.aml.Entity;
-import org.zhouxuan.example.myaml.aml.LenghtFeature;
+import org.zhouxuan.example.myaml.aml.Feature;
+import org.zhouxuan.example.myaml.aml.LengthFeature;
 import org.zhouxuan.example.myaml.aml.NetWorkFeature;
 import org.zhouxuan.example.myaml.services.AmlGrammarAccess;
 
@@ -36,8 +37,7 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case AmlPackage.COLOR_FEATURE:
-				if(context == grammarAccess.getColorFeatureRule() ||
-				   context == grammarAccess.getFeatureRule()) {
+				if(context == grammarAccess.getColorFeatureRule()) {
 					sequence_ColorFeature(context, (ColorFeature) semanticObject); 
 					return; 
 				}
@@ -48,16 +48,20 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case AmlPackage.LENGHT_FEATURE:
-				if(context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getLenghtFeatureRule()) {
-					sequence_LenghtFeature(context, (LenghtFeature) semanticObject); 
+			case AmlPackage.FEATURE:
+				if(context == grammarAccess.getFeatureRule()) {
+					sequence_Feature(context, (Feature) semanticObject); 
+					return; 
+				}
+				else break;
+			case AmlPackage.LENGTH_FEATURE:
+				if(context == grammarAccess.getLengthFeatureRule()) {
+					sequence_LengthFeature(context, (LengthFeature) semanticObject); 
 					return; 
 				}
 				else break;
 			case AmlPackage.NET_WORK_FEATURE:
-				if(context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getNetWorkFeatureRule()) {
+				if(context == grammarAccess.getNetWorkFeatureRule()) {
 					sequence_NetWorkFeature(context, (NetWorkFeature) semanticObject); 
 					return; 
 				}
@@ -77,18 +81,18 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID value=Color)
+	 *     (name='color' value=Color)
 	 */
 	protected void sequence_ColorFeature(EObject context, ColorFeature semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.FEATURE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.FEATURE__NAME));
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.COLOR_FEATURE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.COLOR_FEATURE__NAME));
 			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.COLOR_FEATURE__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.COLOR_FEATURE__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getColorFeatureAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getColorFeatureAccess().getNameColorKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getColorFeatureAccess().getValueColorEnumRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
@@ -96,7 +100,14 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=INT superType=[Entity|ID]? features+=Feature*)
+	 *     (
+	 *         name=INT 
+	 *         superType=[Entity|ID]? 
+	 *         colorFeature=ColorFeature 
+	 *         networkFeature=NetWorkFeature 
+	 *         lengthFeature=LengthFeature 
+	 *         features+=Feature*
+	 *     )
 	 */
 	protected void sequence_Entity(EObject context, Entity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -105,37 +116,56 @@ public class AmlSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID value=DOUBLE)
+	 *     (name=ID value=ID)
 	 */
-	protected void sequence_LenghtFeature(EObject context, LenghtFeature semanticObject) {
+	protected void sequence_Feature(EObject context, Feature semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.FEATURE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.FEATURE__NAME));
-			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.LENGHT_FEATURE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.LENGHT_FEATURE__VALUE));
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.FEATURE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.FEATURE__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getLenghtFeatureAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLenghtFeatureAccess().getValueDOUBLEParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFeatureAccess().getValueIDTerminalRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID value=ID)
+	 *     (name='length' value=DOUBLE)
+	 */
+	protected void sequence_LengthFeature(EObject context, LengthFeature semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.LENGTH_FEATURE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.LENGTH_FEATURE__NAME));
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.LENGTH_FEATURE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.LENGTH_FEATURE__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLengthFeatureAccess().getNameLengthKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLengthFeatureAccess().getValueDOUBLEParserRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='network' value=ID)
 	 */
 	protected void sequence_NetWorkFeature(EObject context, NetWorkFeature semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.FEATURE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.FEATURE__NAME));
+			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.NET_WORK_FEATURE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.NET_WORK_FEATURE__NAME));
 			if(transientValues.isValueTransient(semanticObject, AmlPackage.Literals.NET_WORK_FEATURE__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, AmlPackage.Literals.NET_WORK_FEATURE__VALUE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getNetWorkFeatureAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNetWorkFeatureAccess().getNameNetworkKeyword_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getNetWorkFeatureAccess().getValueIDTerminalRuleCall_2_0(), semanticObject.getValue());
 		feeder.finish();
 	}

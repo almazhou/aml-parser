@@ -93,11 +93,10 @@ public class AmlSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case AmlPackage.LENGHT_FEATURE:
+      case AmlPackage.LENGTH_FEATURE:
       {
-        LenghtFeature lenghtFeature = (LenghtFeature)theEObject;
-        T result = caseLenghtFeature(lenghtFeature);
-        if (result == null) result = caseFeature(lenghtFeature);
+        LengthFeature lengthFeature = (LengthFeature)theEObject;
+        T result = caseLengthFeature(lengthFeature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -105,7 +104,6 @@ public class AmlSwitch<T> extends Switch<T>
       {
         NetWorkFeature netWorkFeature = (NetWorkFeature)theEObject;
         T result = caseNetWorkFeature(netWorkFeature);
-        if (result == null) result = caseFeature(netWorkFeature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -113,7 +111,6 @@ public class AmlSwitch<T> extends Switch<T>
       {
         ColorFeature colorFeature = (ColorFeature)theEObject;
         T result = caseColorFeature(colorFeature);
-        if (result == null) result = caseFeature(colorFeature);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -170,17 +167,17 @@ public class AmlSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Lenght Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Length Feature</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Lenght Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Length Feature</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLenghtFeature(LenghtFeature object)
+  public T caseLengthFeature(LengthFeature object)
   {
     return null;
   }

@@ -20,6 +20,7 @@ import org.zhouxuan.example.myaml.aml.Feature;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.zhouxuan.example.myaml.aml.impl.FeatureImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.zhouxuan.example.myaml.aml.impl.FeatureImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +47,26 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,6 +117,29 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getValue()
+  {
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(String newValue)
+  {
+    String oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AmlPackage.FEATURE__VALUE, oldValue, value));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -103,6 +147,8 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     {
       case AmlPackage.FEATURE__NAME:
         return getName();
+      case AmlPackage.FEATURE__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,6 +165,9 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     {
       case AmlPackage.FEATURE__NAME:
         setName((String)newValue);
+        return;
+      case AmlPackage.FEATURE__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,6 +186,9 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
       case AmlPackage.FEATURE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case AmlPackage.FEATURE__VALUE:
+        setValue(VALUE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -153,6 +205,8 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     {
       case AmlPackage.FEATURE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case AmlPackage.FEATURE__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
@@ -170,6 +224,8 @@ public class FeatureImpl extends MinimalEObjectImpl.Container implements Feature
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }

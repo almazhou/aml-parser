@@ -17,7 +17,7 @@ import org.zhouxuan.example.myaml.aml.Color;
 import org.zhouxuan.example.myaml.aml.ColorFeature;
 import org.zhouxuan.example.myaml.aml.Entity;
 import org.zhouxuan.example.myaml.aml.Feature;
-import org.zhouxuan.example.myaml.aml.LenghtFeature;
+import org.zhouxuan.example.myaml.aml.LengthFeature;
 import org.zhouxuan.example.myaml.aml.NetWorkFeature;
 
 /**
@@ -54,7 +54,7 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass lenghtFeatureEClass = null;
+  private EClass lengthFeatureEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -195,9 +195,39 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEntity_Features()
+  public EReference getEntity_ColorFeature()
   {
     return (EReference)entityEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEntity_NetworkFeature()
+  {
+    return (EReference)entityEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEntity_LengthFeature()
+  {
+    return (EReference)entityEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getEntity_Features()
+  {
+    return (EReference)entityEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -225,9 +255,9 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLenghtFeature()
+  public EAttribute getFeature_Value()
   {
-    return lenghtFeatureEClass;
+    return (EAttribute)featureEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -235,9 +265,29 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getLenghtFeature_Value()
+  public EClass getLengthFeature()
   {
-    return (EAttribute)lenghtFeatureEClass.getEStructuralFeatures().get(0);
+    return lengthFeatureEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLengthFeature_Name()
+  {
+    return (EAttribute)lengthFeatureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLengthFeature_Value()
+  {
+    return (EAttribute)lengthFeatureEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -255,9 +305,19 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNetWorkFeature_Value()
+  public EAttribute getNetWorkFeature_Name()
   {
     return (EAttribute)netWorkFeatureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNetWorkFeature_Value()
+  {
+    return (EAttribute)netWorkFeatureEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -275,9 +335,19 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getColorFeature_Value()
+  public EAttribute getColorFeature_Name()
   {
     return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getColorFeature_Value()
+  {
+    return (EAttribute)colorFeatureEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -326,18 +396,25 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     entityEClass = createEClass(ENTITY);
     createEAttribute(entityEClass, ENTITY__NAME);
     createEReference(entityEClass, ENTITY__SUPER_TYPE);
+    createEReference(entityEClass, ENTITY__COLOR_FEATURE);
+    createEReference(entityEClass, ENTITY__NETWORK_FEATURE);
+    createEReference(entityEClass, ENTITY__LENGTH_FEATURE);
     createEReference(entityEClass, ENTITY__FEATURES);
 
     featureEClass = createEClass(FEATURE);
     createEAttribute(featureEClass, FEATURE__NAME);
+    createEAttribute(featureEClass, FEATURE__VALUE);
 
-    lenghtFeatureEClass = createEClass(LENGHT_FEATURE);
-    createEAttribute(lenghtFeatureEClass, LENGHT_FEATURE__VALUE);
+    lengthFeatureEClass = createEClass(LENGTH_FEATURE);
+    createEAttribute(lengthFeatureEClass, LENGTH_FEATURE__NAME);
+    createEAttribute(lengthFeatureEClass, LENGTH_FEATURE__VALUE);
 
     netWorkFeatureEClass = createEClass(NET_WORK_FEATURE);
+    createEAttribute(netWorkFeatureEClass, NET_WORK_FEATURE__NAME);
     createEAttribute(netWorkFeatureEClass, NET_WORK_FEATURE__VALUE);
 
     colorFeatureEClass = createEClass(COLOR_FEATURE);
+    createEAttribute(colorFeatureEClass, COLOR_FEATURE__NAME);
     createEAttribute(colorFeatureEClass, COLOR_FEATURE__VALUE);
 
     // Create enums
@@ -373,9 +450,6 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    lenghtFeatureEClass.getESuperTypes().add(this.getFeature());
-    netWorkFeatureEClass.getESuperTypes().add(this.getFeature());
-    colorFeatureEClass.getESuperTypes().add(this.getFeature());
 
     // Initialize classes and features; add operations and parameters
     initEClass(amlEClass, Aml.class, "Aml", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -384,18 +458,25 @@ public class AmlPackageImpl extends EPackageImpl implements AmlPackage
     initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEntity_Name(), ecorePackage.getEInt(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEntity_SuperType(), this.getEntity(), null, "superType", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEntity_ColorFeature(), this.getColorFeature(), null, "colorFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEntity_NetworkFeature(), this.getNetWorkFeature(), null, "networkFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEntity_LengthFeature(), this.getLengthFeature(), null, "lengthFeature", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEntity_Features(), this.getFeature(), null, "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(lenghtFeatureEClass, LenghtFeature.class, "LenghtFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLenghtFeature_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, LenghtFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(lengthFeatureEClass, LengthFeature.class, "LengthFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLengthFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, LengthFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLengthFeature_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, LengthFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(netWorkFeatureEClass, NetWorkFeature.class, "NetWorkFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNetWorkFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, NetWorkFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNetWorkFeature_Value(), ecorePackage.getEString(), "value", null, 0, 1, NetWorkFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorFeatureEClass, ColorFeature.class, "ColorFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getColorFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getColorFeature_Value(), this.getColor(), "value", null, 0, 1, ColorFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals

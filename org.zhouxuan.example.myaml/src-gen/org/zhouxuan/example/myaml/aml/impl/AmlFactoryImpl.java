@@ -68,7 +68,7 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
       case AmlPackage.AML: return createAml();
       case AmlPackage.ENTITY: return createEntity();
       case AmlPackage.FEATURE: return createFeature();
-      case AmlPackage.LENGHT_FEATURE: return createLenghtFeature();
+      case AmlPackage.LENGTH_FEATURE: return createLengthFeature();
       case AmlPackage.NET_WORK_FEATURE: return createNetWorkFeature();
       case AmlPackage.COLOR_FEATURE: return createColorFeature();
       default:
@@ -148,10 +148,10 @@ public class AmlFactoryImpl extends EFactoryImpl implements AmlFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public LenghtFeature createLenghtFeature()
+  public LengthFeature createLengthFeature()
   {
-    LenghtFeatureImpl lenghtFeature = new LenghtFeatureImpl();
-    return lenghtFeature;
+    LengthFeatureImpl lengthFeature = new LengthFeatureImpl();
+    return lengthFeature;
   }
 
   /**

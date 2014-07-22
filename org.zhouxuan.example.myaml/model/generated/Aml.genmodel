@@ -20,18 +20,25 @@
     <genClasses ecoreClass="Aml.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Entity/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/colorFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/networkFeature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/lengthFeature"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Aml.ecore#//Entity/features"/>
     </genClasses>
     <genClasses ecoreClass="Aml.ecore#//Feature">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//Feature/value"/>
     </genClasses>
-    <genClasses ecoreClass="Aml.ecore#//LenghtFeature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//LenghtFeature/value"/>
+    <genClasses ecoreClass="Aml.ecore#//LengthFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//LengthFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//LengthFeature/value"/>
     </genClasses>
     <genClasses ecoreClass="Aml.ecore#//NetWorkFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//NetWorkFeature/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//NetWorkFeature/value"/>
     </genClasses>
     <genClasses ecoreClass="Aml.ecore#//ColorFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ColorFeature/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Aml.ecore#//ColorFeature/value"/>
     </genClasses>
   </genPackages>

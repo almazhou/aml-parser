@@ -10,6 +10,9 @@ Aml hidden(WS, ML_COMMENT, SL_COMMENT):
 
 Entity:
 	'puid' name = INT ('extends' superType = [Entity])? '{'
+		colorFeature = ColorFeature
+		networkFeature = NetWorkFeature 
+		lengthFeature = LengthFeature 		
 		(features += Feature)*
 	'}'	
 ;
@@ -18,22 +21,23 @@ enum Color :
 	Red | Black | White | Grey | Green;
 
 Feature:
-	ColorFeature | NetWorkFeature | LenghtFeature	
+	name = ID '=' value = ID ';'	
 ;
 
-LenghtFeature:
-	name = ID '=' value = DOUBLE	
+
+LengthFeature:
+	name = 'length' '=' value = DOUBLE ';'	
 ;
 
 DOUBLE returns ecore::EDouble:
-    INT '.' INT
+    INT '.' INT 
 ;
 
 NetWorkFeature:
-	name = ID '=' value = ID	
+	name = 'network' '=' value = ID	';'
 ;
 
 ColorFeature:
-	name = ID '=' value= Color
+	name = 'color' '=' value= Color ';'
 ;
 

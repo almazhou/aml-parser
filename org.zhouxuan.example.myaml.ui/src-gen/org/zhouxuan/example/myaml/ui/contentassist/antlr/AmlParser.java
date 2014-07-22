@@ -37,20 +37,25 @@ public class AmlParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getFeatureAccess().getAlternatives(), "rule__Feature__Alternatives");
 					put(grammarAccess.getColorAccess().getAlternatives(), "rule__Color__Alternatives");
 					put(grammarAccess.getEntityAccess().getGroup(), "rule__Entity__Group__0");
 					put(grammarAccess.getEntityAccess().getGroup_2(), "rule__Entity__Group_2__0");
-					put(grammarAccess.getLenghtFeatureAccess().getGroup(), "rule__LenghtFeature__Group__0");
+					put(grammarAccess.getFeatureAccess().getGroup(), "rule__Feature__Group__0");
+					put(grammarAccess.getLengthFeatureAccess().getGroup(), "rule__LengthFeature__Group__0");
 					put(grammarAccess.getDOUBLEAccess().getGroup(), "rule__DOUBLE__Group__0");
 					put(grammarAccess.getNetWorkFeatureAccess().getGroup(), "rule__NetWorkFeature__Group__0");
 					put(grammarAccess.getColorFeatureAccess().getGroup(), "rule__ColorFeature__Group__0");
 					put(grammarAccess.getAmlAccess().getElementsAssignment(), "rule__Aml__ElementsAssignment");
 					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
 					put(grammarAccess.getEntityAccess().getSuperTypeAssignment_2_1(), "rule__Entity__SuperTypeAssignment_2_1");
-					put(grammarAccess.getEntityAccess().getFeaturesAssignment_4(), "rule__Entity__FeaturesAssignment_4");
-					put(grammarAccess.getLenghtFeatureAccess().getNameAssignment_0(), "rule__LenghtFeature__NameAssignment_0");
-					put(grammarAccess.getLenghtFeatureAccess().getValueAssignment_2(), "rule__LenghtFeature__ValueAssignment_2");
+					put(grammarAccess.getEntityAccess().getColorFeatureAssignment_4(), "rule__Entity__ColorFeatureAssignment_4");
+					put(grammarAccess.getEntityAccess().getNetworkFeatureAssignment_5(), "rule__Entity__NetworkFeatureAssignment_5");
+					put(grammarAccess.getEntityAccess().getLengthFeatureAssignment_6(), "rule__Entity__LengthFeatureAssignment_6");
+					put(grammarAccess.getEntityAccess().getFeaturesAssignment_7(), "rule__Entity__FeaturesAssignment_7");
+					put(grammarAccess.getFeatureAccess().getNameAssignment_0(), "rule__Feature__NameAssignment_0");
+					put(grammarAccess.getFeatureAccess().getValueAssignment_2(), "rule__Feature__ValueAssignment_2");
+					put(grammarAccess.getLengthFeatureAccess().getNameAssignment_0(), "rule__LengthFeature__NameAssignment_0");
+					put(grammarAccess.getLengthFeatureAccess().getValueAssignment_2(), "rule__LengthFeature__ValueAssignment_2");
 					put(grammarAccess.getNetWorkFeatureAccess().getNameAssignment_0(), "rule__NetWorkFeature__NameAssignment_0");
 					put(grammarAccess.getNetWorkFeatureAccess().getValueAssignment_2(), "rule__NetWorkFeature__ValueAssignment_2");
 					put(grammarAccess.getColorFeatureAccess().getNameAssignment_0(), "rule__ColorFeature__NameAssignment_0");
